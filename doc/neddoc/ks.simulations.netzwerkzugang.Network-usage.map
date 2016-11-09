@@ -1,0 +1,5 @@
+<area shape="rect" id="node1" href="ks.simulations.netzwerkzugang.Network.html" title="Network Network" alt="" coords="168,5,240,31">
+<area shape="rect" id="node2" href="ks.simulations.netzwerkzugang.Network.TPcable.html" title="Channel TPcable" alt="" coords="5,79,77,104">
+<area shape="rect" id="node3" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html" title="Compound Module EtherSwitch" alt="" coords="101,79,195,104">
+<area shape="rect" id="node4" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html" title="Compound Module EtherHost" alt="" coords="219,79,301,104">
+<area shape="rect" id="node5" href="../../../inet/doc/neddoc/inet.common.scenario.ScenarioManager.html" title="Simple Module ScenarioManager" alt="" coords="325,79,448,104">

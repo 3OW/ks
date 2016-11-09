@@ -1,0 +1,100 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Network <i>Network</i></h2>
+<b>Package:</b> ks.simulations.anwendung<br/><b>File: <a href="simulations-anwendung-Network.ned.html">simulations/anwendung/Network.ned</a></b><br/>
+<p>Das Netzwerk</p>
+<img src="ks.simulations.anwendung.Network-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="ks.application.direct.HttpDirectClient.html" title="HttpDirectClient" alt="HttpDirectClient" coords="95,137,138,200">
+<area shape="rect" href="ks.application.direct.HttpDirectServer.html" title="HttpDirectServer" alt="HttpDirectServer" coords="400,136,440,201">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram.</p>
+<img src="ks.simulations.anwendung.Network-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="ks.simulations.anwendung.Network.html" title="Network Network" alt="" coords="172,5,244,31">
+<area shape="rect" id="node2" href="ks.application.direct.HttpDirectServer.html" title="Simple Module HttpDirectServer" alt="" coords="5,79,125,104">
+<area shape="rect" id="node3" href="ks.application.direct.HttpDirectClient.html" title="Simple Module HttpDirectClient" alt="" coords="150,79,266,104">
+<area shape="rect" id="node4" href="ned.DelayChannel.html" title="Channel DelayChannel" alt="" coords="291,79,395,104">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram.</p>
+<img src="ks.simulations.anwendung.Network-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="ks.simulations.anwendung.Network.html" title="Network Network" alt="" coords="5,5,77,31">
+</map>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>isNetwork</td>
+   <td><i></i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="ks.application.direct.HttpDirectClient.html">client</a>.httpHost</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>&lt; Hostname f&uuml;r Host-Feld im HTTP-Request</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="ks.application.direct.HttpDirectClient.html">client</a>.page</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>&lt; Name des Dokuments im HTTP-Request</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="ks.application.direct.HttpDirectServer.html">server</a>.numBytes</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4000</td>
+   <td>
+<p>L&auml;nge des HTML-Dokuments</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Das Netzwerk
+//
+</span><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">Network</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">client</span><span style="color: #000000; ">: </span><span style="color: #000000; ">HttpDirectClient</span><span style="color: #000000; "> {
+
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=112,116;i=device/pc4&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">server</span><span style="color: #000000; ">: </span><span style="color: #000000; ">HttpDirectServer</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=418,116;i=device/server2&quot;</span><span style="color: #000000; ">);
+        }
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">client</span><span style="color: #000000; ">.</span><span style="color: #000000; ">out</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> {  </span><span style="color: #000000; ">delay</span><span style="color: #000000; "> = </span><span style="color: #008000; ">100</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">; } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">server</span><span style="color: #000000; ">.</span><span style="color: #000000; ">in</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">server</span><span style="color: #000000; ">.</span><span style="color: #000000; ">out</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> {  </span><span style="color: #000000; ">delay</span><span style="color: #000000; "> = </span><span style="color: #008000; ">100</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">; } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">client</span><span style="color: #000000; ">.</span><span style="color: #000000; ">in</span><span style="color: #000000; ">;
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

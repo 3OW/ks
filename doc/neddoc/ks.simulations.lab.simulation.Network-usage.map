@@ -1,0 +1,6 @@
+<area shape="rect" id="node1" href="ks.simulations.lab.simulation.Network.html" title="Network Network" alt="" coords="333,5,405,31">
+<area shape="rect" id="node2" href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" title="Simple Module IPv4NetworkConfigurator" alt="" coords="5,79,175,104">
+<area shape="rect" id="node3" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html" title="Compound Module EtherSwitch" alt="" coords="199,79,293,104">
+<area shape="rect" id="node4" href="../../../inet/doc/neddoc/inet.node.inet.StandardHost.html" title="Compound Module StandardHost" alt="" coords="317,79,420,104">
+<area shape="rect" id="node5" href="ks.simulations.lab.simulation.Network.tpcable.html" title="Channel tpcable" alt="" coords="445,79,517,104">
+<area shape="rect" id="node6" href="../../../inet/doc/neddoc/inet.node.inet.Router.html" title="Compound Module Router" alt="" coords="541,79,613,104">

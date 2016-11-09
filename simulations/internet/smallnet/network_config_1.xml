@@ -1,0 +1,21 @@
+<config>
+
+<!-- Netzwerk-Interfaces werden ohne "g" und '[]‘ notiert: pppg[0] -> ppp0 -->
+
+<!-- Client -->
+<interface hosts='client' address='192.168.1.10' netmask='255.255.255.0'/>
+<route hosts='client'  destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.1.1' interface='ppp0'/>
+
+<!-- Server -->
+<interface hosts='server' address='192.168.2.10' netmask='255.255.255.0'/>
+<route hosts='server'  destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.2.1' interface='ppp0'/>
+				
+<!-- Router 1 -->
+<interface hosts='router1' address='192.168.1.1' netmask='255.255.255.0' names='ppp1'/>
+<interface hosts='router1' address='10.0.0.1' netmask='255.255.255.252' names='ppp0'/>
+
+<!-- Router 2 -->
+<interface hosts='router2' address='192.168.2.1' netmask='255.255.255.0' names='ppp1'/>
+<interface hosts='router2' address='10.0.0.2' netmask='255.255.255.252' names='ppp0'/>
+
+</config>

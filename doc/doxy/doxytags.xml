@@ -1,0 +1,1173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>httpClient.cc</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/client/</path>
+    <filename>httpClient_8cc</filename>
+    <includes id="httpClient_8h" name="httpClient.h" local="no" imported="no">httpClient.h</includes>
+    <namespace>http</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>prepareRequest</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a707553265a63dc6bfce98816a1dad33d</anchor>
+      <arglist>(string httpRequest, RawPacket *packet)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>handleReply</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>ab700118e73386bca71a026172398e88e</anchor>
+      <arglist>(char *response)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parseHttp</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>aff0496f308c6a70a0047447a378b7849</anchor>
+      <arglist>(string message, map&lt; string, string &gt; &amp;m, string &amp;body)</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>headerArrived</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a30f39323704d8300e11561adc541ab6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>contentLength</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a53f2f7d8bda533a27a570fc90f664dcf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>map&lt; string, string &gt;</type>
+      <name>header</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a591ea3407b22c78e70da83ac2c3adaf9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>string</type>
+      <name>fullBody</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a830c4412291837e06d5dd732e42b6192</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>string</type>
+      <name>body</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>aa583f9ea96d670d31d947724431b5efb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>httpClient.h</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/client/</path>
+    <filename>httpClient_8h</filename>
+    <includes id="httpCommon_8h" name="httpCommon.h" local="no" imported="no">httpCommon.h</includes>
+    <namespace>http</namespace>
+  </compound>
+  <compound kind="file">
+    <name>httpCommon.cc</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/common/</path>
+    <filename>httpCommon_8cc</filename>
+    <includes id="httpCommon_8h" name="httpCommon.h" local="no" imported="no">httpCommon.h</includes>
+    <namespace>http</namespace>
+    <member kind="function">
+      <type>string</type>
+      <name>trim</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a047ea9b26d3325eca1447056021fd2cc</anchor>
+      <arglist>(string str)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillPacket</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a856df2918680a8131ea99ff1365b64ec</anchor>
+      <arglist>(RawPacket *packet, string httpMsg)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>httpCommon.h</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/common/</path>
+    <filename>httpCommon_8h</filename>
+    <namespace>http</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>HTTP_MAXBUFFER</name>
+      <anchorfile>httpCommon_8h.html</anchorfile>
+      <anchor>a3d0bfbbbe419ca5a3c30594970cbe2a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CODE_200</name>
+      <anchorfile>httpCommon_8h.html</anchorfile>
+      <anchor>a7efd9f214c1335e5d5fc8f0758ec41ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CODE_400</name>
+      <anchorfile>httpCommon_8h.html</anchorfile>
+      <anchor>ab840db27739331f6a37f961728adf661</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CODE_404</name>
+      <anchorfile>httpCommon_8h.html</anchorfile>
+      <anchor>a1c172a34b3c951a8bf8ece06a12e40d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CODE_505</name>
+      <anchorfile>httpCommon_8h.html</anchorfile>
+      <anchor>a3287a6c68d9c583b2e0aa000a7134e9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CODE_403</name>
+      <anchorfile>httpCommon_8h.html</anchorfile>
+      <anchor>a775192caed2afb7ad1a6f10131cdfbc2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>HttpDirectClient.cc</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/direct/</path>
+    <filename>HttpDirectClient_8cc</filename>
+    <includes id="HttpDirectClient_8h" name="HttpDirectClient.h" local="yes" imported="no">HttpDirectClient.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>HttpDirectClient_8cc.html</anchorfile>
+      <anchor>a0bc0f746aa8cc4d4aab21aef9229189a</anchor>
+      <arglist>(HttpDirectClient)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>HttpDirectClient.h</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/direct/</path>
+    <filename>HttpDirectClient_8h</filename>
+    <includes id="httpClient_8h" name="httpClient.h" local="no" imported="no">httpClient.h</includes>
+    <class kind="class">HttpDirectClient</class>
+  </compound>
+  <compound kind="file">
+    <name>HttpDirectServer.cc</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/direct/</path>
+    <filename>HttpDirectServer_8cc</filename>
+    <includes id="HttpDirectServer_8h" name="HttpDirectServer.h" local="yes" imported="no">HttpDirectServer.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>HttpDirectServer_8cc.html</anchorfile>
+      <anchor>aa00306a0ba319c7e2458c26d7cd54474</anchor>
+      <arglist>(HttpDirectServer)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>HttpDirectServer.h</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/direct/</path>
+    <filename>HttpDirectServer_8h</filename>
+    <includes id="httpServer_8h" name="httpServer.h" local="no" imported="no">httpServer.h</includes>
+    <class kind="class">HttpDirectServer</class>
+  </compound>
+  <compound kind="file">
+    <name>httpServer.cc</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/server/</path>
+    <filename>httpServer_8cc</filename>
+    <includes id="httpServer_8h" name="httpServer.h" local="no" imported="no">httpServer.h</includes>
+    <namespace>http</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>prepareReply</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a42a0e50dbcc49e95be7ad7e16461ec67</anchor>
+      <arglist>(char *request, RawPacket *packet, int numBytes=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>parseGET</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>afd94a830f6fa5961bd1d571db7e26d55</anchor>
+      <arglist>(string message)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>httpServer.h</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/server/</path>
+    <filename>httpServer_8h</filename>
+    <includes id="httpCommon_8h" name="httpCommon.h" local="no" imported="no">httpCommon.h</includes>
+    <namespace>http</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>SERVER_NAME</name>
+      <anchorfile>httpServer_8h.html</anchorfile>
+      <anchor>af00aa3c79fe31d435739c34e4c989835</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>HttpTcpClientApp.cc</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/tcp/</path>
+    <filename>HttpTcpClientApp_8cc</filename>
+    <includes id="HttpTcpClientApp_8h" name="HttpTcpClientApp.h" local="yes" imported="no">./HttpTcpClientApp.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>HttpTcpClientApp_8cc.html</anchorfile>
+      <anchor>a487de74e491571f033dcc73efb50efb2</anchor>
+      <arglist>(HttpTcpClientApp)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>HttpTcpClientApp.h</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/tcp/</path>
+    <filename>HttpTcpClientApp_8h</filename>
+    <includes id="httpClient_8h" name="httpClient.h" local="no" imported="no">httpClient.h</includes>
+    <includes id="TCPSocket_8h" name="TCPSocket.h" local="yes" imported="no">./TCPSocket.h</includes>
+    <class kind="class">HttpTcpClientApp</class>
+  </compound>
+  <compound kind="file">
+    <name>HttpTcpServerApp.cc</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/tcp/</path>
+    <filename>HttpTcpServerApp_8cc</filename>
+    <includes id="HttpTcpServerApp_8h" name="HttpTcpServerApp.h" local="yes" imported="no">HttpTcpServerApp.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>HttpTcpServerApp_8cc.html</anchorfile>
+      <anchor>a62ffed3f39e007f94db0ef95c80b8a5b</anchor>
+      <arglist>(HttpTcpServerApp)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>HttpTcpServerApp.h</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/tcp/</path>
+    <filename>HttpTcpServerApp_8h</filename>
+    <includes id="httpServer_8h" name="httpServer.h" local="no" imported="no">httpServer.h</includes>
+    <includes id="TCPSocket_8h" name="TCPSocket.h" local="yes" imported="no">./TCPSocket.h</includes>
+    <class kind="class">HttpTcpServerApp</class>
+  </compound>
+  <compound kind="file">
+    <name>TCPSocket.cc</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/tcp/</path>
+    <filename>TCPSocket_8cc</filename>
+    <includes id="TCPSocket_8h" name="TCPSocket.h" local="yes" imported="no">./TCPSocket.h</includes>
+    <namespace>ks</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>CASE</name>
+      <anchorfile>TCPSocket_8cc.html</anchorfile>
+      <anchor>a60cc06bef97da802b8522d258ac4fe89</anchor>
+      <arglist>(x)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>TCPSocket.h</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/tcp/</path>
+    <filename>TCPSocket_8h</filename>
+    <class kind="class">ks::TCPSocket</class>
+    <class kind="class">ks::TCPSocket::CallbackInterface</class>
+    <namespace>init</namespace>
+    <namespace>ks</namespace>
+  </compound>
+  <compound kind="class">
+    <name>HttpDirectClient</name>
+    <filename>classHttpDirectClient.html</filename>
+    <base>cSimpleModule</base>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>initialize</name>
+      <anchorfile>classHttpDirectClient.html</anchorfile>
+      <anchor>a67794bf94ef40dc72d9d62a5200fd958</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>handleMessage</name>
+      <anchorfile>classHttpDirectClient.html</anchorfile>
+      <anchor>a84e6e11afd946fd8de79e141e81de856</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>const char *</type>
+      <name>page</name>
+      <anchorfile>classHttpDirectClient.html</anchorfile>
+      <anchor>a37aaff6fcc66bebfd6cdd4584d2a9204</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>const char *</type>
+      <name>httpHost</name>
+      <anchorfile>classHttpDirectClient.html</anchorfile>
+      <anchor>a856d19993ba2e9d16c66770e23348b43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>string</type>
+      <name>httpRequest</name>
+      <anchorfile>classHttpDirectClient.html</anchorfile>
+      <anchor>a4e122a4fe7a0fa856b2d9b112b370293</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>HttpDirectServer</name>
+    <filename>classHttpDirectServer.html</filename>
+    <base>cSimpleModule</base>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>initialize</name>
+      <anchorfile>classHttpDirectServer.html</anchorfile>
+      <anchor>a0d5eb65fd3d47339f430f2c507e09e8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>handleMessage</name>
+      <anchorfile>classHttpDirectServer.html</anchorfile>
+      <anchor>ad5e1036d6905c1d5b2d952573c2bc94a</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>numBytes</name>
+      <anchorfile>classHttpDirectServer.html</anchorfile>
+      <anchor>a93724c757fd291656cfae753ec8ede12</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>HttpTcpClientApp</name>
+    <filename>classHttpTcpClientApp.html</filename>
+    <base>cSimpleModule</base>
+    <base>ks::TCPSocket::CallbackInterface</base>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>numInitStages</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a01e760f786f7330fcea054d74b680879</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>initialize</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a9b92bed7b5a8676e70ac97ad1df8ab02</anchor>
+      <arglist>(int stage) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>handleMessage</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a05afc43d6e2d27cf614ff78056aadf94</anchor>
+      <arglist>(cMessage *msg) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketEstablished</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a9bf262c8e32d66cd79b9010cc1a1d068</anchor>
+      <arglist>(int connId, void *yourPtr) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketDataIndication</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>aa4e1d72bd0de79fcd484355f21354150</anchor>
+      <arglist>(int connId, void *yourPtr) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketDataArrived</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a355ee3c246de28c943d09623fa5c82ce</anchor>
+      <arglist>(int connId, void *yourPtr, cPacket *msg, bool urgent) override</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>TCPSocket</type>
+      <name>socket</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a0d7fec953990d4060755b348658b1e7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>const char *</type>
+      <name>connectAddress</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a8bede26a75afd062a68fe5f601aef8cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>connectPort</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>aa6c5c91bd12af938df7ce9d70c4201b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>const char *</type>
+      <name>localAddress</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a747b892c4d1fe01dd6482985c3564abb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>localPort</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>aa91e0f3e7a882f657c51deb1ac05e48a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>const char *</type>
+      <name>page</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a2d9e6401895724028b927d3703528a0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>const char *</type>
+      <name>httpHost</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a183b8830170d8f0ed0f0c889ce21c556</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>string</type>
+      <name>httpRequest</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a7e4442b40d58496400eb348bf7fd57d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>processing</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>ae6bac2a6b837dabd26d2ae05c21d7211</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>dataIndicated</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>a33761fe12471aaa77fa81eceb3e1af0b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>dataProcessing</name>
+      <anchorfile>classHttpTcpClientApp.html</anchorfile>
+      <anchor>aa175b07bf64c1d9271175219457f7941</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CallbackInterface</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>a1572abbaef81af3049a6c81e588808a3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketPeerClosed</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>ab600d957834fe506dd5523f008829c9a</anchor>
+      <arglist>(int connId, void *yourPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketClosed</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>a42c2bb5812b2b9c2c82b25593d5204b2</anchor>
+      <arglist>(int connId, void *yourPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketFailure</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>ada7b74c07ee33fbdbe330738b01e8ab2</anchor>
+      <arglist>(int connId, void *yourPtr, int code)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketStatusArrived</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>a0aa34a35bf7f9d2aae2531ed07cb102d</anchor>
+      <arglist>(int connId, void *yourPtr, TCPStatusInfo *status)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketDeleted</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>a6c3058e7678ef5234a24532fc36e81c8</anchor>
+      <arglist>(int connId, void *yourPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>HttpTcpServerApp</name>
+    <filename>classHttpTcpServerApp.html</filename>
+    <base>cSimpleModule</base>
+    <base>ks::TCPSocket::CallbackInterface</base>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>numInitStages</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>ac31debbbef2686e41fdce620374796a4</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>initialize</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>a65c24a8ecd70ce1dd4c050d20602927d</anchor>
+      <arglist>(int stage) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>handleMessage</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>ab5f512c867275285864150cf0ccf0e2d</anchor>
+      <arglist>(cMessage *msg) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketDataArrived</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>a25bc271897516d2ba989cc83a94f3da9</anchor>
+      <arglist>(int connId, void *yourPtr, cPacket *msg, bool urgent) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketPeerClosed</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>ad7d62a01502e34d2a8654598462f1c7e</anchor>
+      <arglist>(int connId, void *yourPtr) override</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>TCPSocket</type>
+      <name>socket</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>af52a4553bd29400d77a6867ad12693f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>const char *</type>
+      <name>localAddress</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>a26ebccea86970283d1e39245cddef0ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>localPort</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>a46f3f8806a0497c52f4b48a63dec11b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>numBytes</name>
+      <anchorfile>classHttpTcpServerApp.html</anchorfile>
+      <anchor>adbd2b8000fb446bb2bf089e42a2578d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketEstablished</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>a68bc49341e15ff5d54c753900a8312ad</anchor>
+      <arglist>(int connId, void *yourPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>socketDataIndication</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>a3cd175a5aa6176ebb2683286047954d5</anchor>
+      <arglist>(int connId, void *yourPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>http</name>
+    <filename>namespacehttp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>prepareRequest</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a707553265a63dc6bfce98816a1dad33d</anchor>
+      <arglist>(string httpRequest, RawPacket *packet)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>handleReply</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>ab700118e73386bca71a026172398e88e</anchor>
+      <arglist>(char *response)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parseHttp</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>aff0496f308c6a70a0047447a378b7849</anchor>
+      <arglist>(string message, map&lt; string, string &gt; &amp;m, string &amp;body)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>trim</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a047ea9b26d3325eca1447056021fd2cc</anchor>
+      <arglist>(string str)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillPacket</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a856df2918680a8131ea99ff1365b64ec</anchor>
+      <arglist>(RawPacket *packet, string httpMsg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prepareReply</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a42a0e50dbcc49e95be7ad7e16461ec67</anchor>
+      <arglist>(char *request, RawPacket *packet, int numBytes=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>parseGET</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>afd94a830f6fa5961bd1d571db7e26d55</anchor>
+      <arglist>(string message)</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>headerArrived</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a30f39323704d8300e11561adc541ab6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>contentLength</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a53f2f7d8bda533a27a570fc90f664dcf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>map&lt; string, string &gt;</type>
+      <name>header</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a591ea3407b22c78e70da83ac2c3adaf9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>string</type>
+      <name>fullBody</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>a830c4412291837e06d5dd732e42b6192</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>string</type>
+      <name>body</name>
+      <anchorfile>namespacehttp.html</anchorfile>
+      <anchor>aa583f9ea96d670d31d947724431b5efb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>init</name>
+    <filename>namespaceinit.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>ks</name>
+    <filename>namespaceks.html</filename>
+    <class kind="class">ks::TCPSocket</class>
+  </compound>
+  <compound kind="class">
+    <name>ks::TCPSocket</name>
+    <filename>classks_1_1TCPSocket.html</filename>
+    <class kind="class">ks::TCPSocket::CallbackInterface</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>State</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>NOT_BOUND</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6ace0d3bf96fa8d3d76d34b8686159a51e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BOUND</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6af8918265ae1d573c1aa7d505ca793b9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>LISTENING</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6ad31a04e123e31977cdc26e240b175532</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CONNECTING</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6acf52053d8a79a36ce2ea494c785828c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CONNECTED</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6ac725a8c9be0e6599b12dfbb98f4c614d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PEER_CLOSED</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6af5c2843abe18f6509c6131e4f92a8905</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>LOCALLY_CLOSED</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6a4f2e9517a3afb8c20e42f35f2b4bc10c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CLOSED</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6a4d97685111904739d88a37d0310fb052</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SOCKERROR</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab06a01d99c914f990309169a119115f6a10a012dba435297159781edf2f260893</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TCPSocket</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a522c977d1c8da5a5f0abcab3da168adc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TCPSocket</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aa64c79b1f588eb485026d82f2a1cffff</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~TCPSocket</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aa588345b9decd8cf81f9e3aaa702557c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getConnectionId</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a1c8cf1b49f9a74c00fbd69191e35d2f6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getState</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a55c5b70e199d59bd059f8b0f95178f4b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>L3Address</type>
+      <name>getLocalAddress</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a2f3f0ff1c4ddcc0c254194ee6c1b6154</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getLocalPort</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a8d409999b76e2f7f6b1be2e0efe5ac7c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>L3Address</type>
+      <name>getRemoteAddress</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aa87868eabc0762d44e4efc607631c645</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getRemotePort</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a11637eb08b5cedc80f31db5f0fa79fa3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const char *</type>
+      <name>stateName</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a45c7469e5ac6f0d18b28f00662dbae28</anchor>
+      <arglist>(int state)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>sendToTCP</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aee7abe8e15ac615a5a7ecfa71c101729</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>listen</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aa4c4771d0773348fc713ba4250e5564a</anchor>
+      <arglist>(bool fork)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>numBytes</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ad96b0df7258cafeef39bc33dd2417a54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>connId</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a68063a46cb5c1f86b2c8eede3c75e0c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>sockstate</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab65b783814e144b57ad100e6eb16640c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>L3Address</type>
+      <name>localAddr</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>af9e03bc9648e109092f7c85b8b9f3a77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>localPrt</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a2d6d88f0349a168e72f90b5e52190390</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>L3Address</type>
+      <name>remoteAddr</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ae032553ef3aa9ebc50f8a1ab44632db0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>remotePrt</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ac55891838fdd7d2c7f617bdb88b2cce0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>CallbackInterface *</type>
+      <name>cb</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a1956e888f317195c4a90db39a4f98227</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>void *</type>
+      <name>yourPtr</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a8aa97276aaa6910640965ca730243f2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cGate *</type>
+      <name>gateToTcp</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aa29f04c6ed5a3a54ce9d061cf0d447e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>TCPDataTransferMode</type>
+      <name>dataTransferMode</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a80d0f3b49cbf73acfe8231aa0df536fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>tcpAlgorithmClass</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a5d3a17838100573398c054c39aa346e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setOutputGate</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a93c2983afc191ae8de5818996a06008d</anchor>
+      <arglist>(cGate *toTcp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>bind</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a6421ac72b0f24588e26b063e9ed52a1d</anchor>
+      <arglist>(int localPort)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>bind</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a9484569059a469721e26b00e25498d05</anchor>
+      <arglist>(L3Address localAddr, int localPort)</arglist>
+    </member>
+    <member kind="function">
+      <type>TCPDataTransferMode</type>
+      <name>getDataTransferMode</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a04fe0c678cda52e86bae5e4534b49571</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>getTCPAlgorithmClass</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aecdc7ff7142d5060298b2e43e20d0142</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setDataTransferMode</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a041ede715e803eccfa38631da1637d88</anchor>
+      <arglist>(TCPDataTransferMode transferMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>readDataTransferModePar</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aadfafab415b1be8c0c79e74de4be0716</anchor>
+      <arglist>(cComponent &amp;component)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTCPAlgorithmClass</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a2c49ceef4b47f1e9493b8bcd6ccb3f9e</anchor>
+      <arglist>(const char *tcpAlgorithmClass)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>listen</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>aa0a2dc087aa29382e398577d3651699b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>listenOnce</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a2ccd0ac9164069d68e8594fd55b9880d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>connect</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a98679ccee779d4d8954d714c7288a564</anchor>
+      <arglist>(L3Address remoteAddr, int remotePort)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a53864e1f4ce02fc0db150f3d4ae60ce0</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>receive</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ad9415d7a6544e8a77a18bff27916cd06</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sendCommand</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a133c120a1b216b1f2e94df6498c80ab4</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab5d5fdcdcf6c4c4913e47bc169b9bb20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>abort</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ae68e10802685d3569bb52509c1804f52</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>requestStatus</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a2bc548b7165a29fd043ce5351a77cc35</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>renewSocket</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a15a73ebba044200769bcb0ae2315880a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TCPDataTransferMode</type>
+      <name>convertStringToDataTransferMode</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ae6e63ab3488b3f15ca62b0af048f1955</anchor>
+      <arglist>(const char *transferMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>belongsToSocket</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>ab3ccc55a8452e07786729a594fb30919</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCallbackObject</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a62c9bf4fde9eefc37eaf41ae2f0c9ec7</anchor>
+      <arglist>(CallbackInterface *cb, void *yourPtr=nullptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processMessage</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a1ca706b83ad9d5ba5079c7ac78bdb387</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>belongsToAnyTCPSocket</name>
+      <anchorfile>classks_1_1TCPSocket.html</anchorfile>
+      <anchor>a7396fe04e0d5714aecd0b55c1e9b5c22</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ks::TCPSocket::CallbackInterface</name>
+    <filename>classks_1_1TCPSocket_1_1CallbackInterface.html</filename>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>socketDataArrived</name>
+      <anchorfile>classks_1_1TCPSocket_1_1CallbackInterface.html</anchorfile>
+      <anchor>a440c8d4cebf47da1cb8aba2ec8a8fbb2</anchor>
+      <arglist>(int connId, void *yourPtr, cPacket *msg, bool urgent)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="dir">
+    <name>application</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/</path>
+    <filename>dir_844f6ab5c2ae79211596f3dcdd81adb7.html</filename>
+    <dir>direct</dir>
+    <dir>http</dir>
+    <dir>tcp</dir>
+  </compound>
+  <compound kind="dir">
+    <name>client</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/client/</path>
+    <filename>dir_8fa52fd97e07ecfb4e268aeee7746a45.html</filename>
+    <file>httpClient.cc</file>
+    <file>httpClient.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>common</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/common/</path>
+    <filename>dir_ccb2a0f41e6b5ef70e13b27ff533b27a.html</filename>
+    <file>httpCommon.cc</file>
+    <file>httpCommon.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>direct</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/direct/</path>
+    <filename>dir_e231c2218a00478dfc3b7f625a910e4b.html</filename>
+    <file>HttpDirectClient.cc</file>
+    <file>HttpDirectClient.h</file>
+    <file>HttpDirectServer.cc</file>
+    <file>HttpDirectServer.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>http</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/</path>
+    <filename>dir_056d19b20d26c95ac9a3ee9314dae720.html</filename>
+    <dir>client</dir>
+    <dir>common</dir>
+    <dir>server</dir>
+  </compound>
+  <compound kind="dir">
+    <name>server</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/http/server/</path>
+    <filename>dir_8599801510ed507680f4398dc005c29a.html</filename>
+    <file>httpServer.cc</file>
+    <file>httpServer.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>src</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/</path>
+    <filename>dir_68267d1309a1af8e8297ef4c3efbcdba.html</filename>
+    <dir>application</dir>
+  </compound>
+  <compound kind="dir">
+    <name>tcp</name>
+    <path>/home/praktikum/praktikum/workspace/ks/src/application/tcp/</path>
+    <filename>dir_6a7171cd4bafe09092b962421f75c5b1.html</filename>
+    <file>HttpTcpClientApp.cc</file>
+    <file>HttpTcpClientApp.h</file>
+    <file>HttpTcpServerApp.cc</file>
+    <file>HttpTcpServerApp.h</file>
+    <file>TCPSocket.cc</file>
+    <file>TCPSocket.h</file>
+  </compound>
+</tagfile>

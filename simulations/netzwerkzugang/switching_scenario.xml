@@ -1,0 +1,17 @@
+<scenario>
+    <at t="5.1">
+        <disconnect src-module="hostD" src-gate="ethg" />
+    </at>
+    <at t="6">
+        <connect src-module="hostD" src-gate="ethg"
+                 dest-module="switch1" dest-gate="ethg[3]" 
+                 channel-type="ned.DatarateChannel">
+            <param name="datarate" value="100Mbps" />
+            <param name="delay" value="0.5us" />
+        </connect>
+    </at>
+<!--
+    <set-channel-attr t="8" src-module="hostA" src-gate="ethg" attr="datarate" value="10Mbps"/>
+    <set-channel-attr t="8" src-module="hostA" src-gate="ethg" attr="disabled" value="true"/>
+-->
+</scenario>

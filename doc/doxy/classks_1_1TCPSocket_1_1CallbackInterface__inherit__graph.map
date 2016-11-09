@@ -1,0 +1,4 @@
+<map id="ks::TCPSocket::CallbackInterface" name="ks::TCPSocket::CallbackInterface">
+<area shape="rect" id="node2" href="$classHttpTcpClientApp.html" title="Ein HTTP&#45;Client&#45;Anwendungs&#45;Modul, das über einen kompletten Netzwerkstack mittels TCP mit einem HTTP&#45;..." alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$classHttpTcpServerApp.html" title="Ein HTTP&#45;Server&#45;Anwendungs&#45;Modul, das über einen kompletten Netzwerkstack mittels TCP mit einem HTTP&#45;..." alt="" coords="157,80,287,107"/>
+</map>

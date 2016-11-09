@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/ks/simulations/transport/results/FlowControl-*.vec"/>
+    <inputs name="/ks/simulations/transport/results/FlowControl-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="set1">
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/FlowControl-0.vec) AND attr:configname(FlowControl) AND attr:runnumber(0) AND module(Network.server.tcp) AND name(&quot;sent seq&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/FlowControl-0.vec) AND attr:configname(FlowControl) AND attr:runnumber(0) AND module(Network.client.tcp) AND name(&quot;receive window&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:LineChart" name="0 ms Verarbeitungszeit" lineNameFormat="">
+        <properties name="Graph.Title" value="0 ms Verarbeitungszeit"/>
+        <properties name="Graph.Title.Font" value="Arial-regular-16"/>
+        <properties name="X.Axis.Title" value="Zeit"/>
+        <properties name="Y.Axis.Title" value="Sequenznummer bzw. Bytemenge"/>
+        <properties name="Axis.Title.Font" value="Arial-regular-16"/>
+        <properties name="Label.Font" value="Arial-regular-16"/>
+        <properties name="Legend.Display" value="true"/>
+        <properties name="Legend.Font" value="Arial-regular-16"/>
+        <properties name="Symbols.Size" value="6"/>
+        <properties name="Line.Type" value="Dots"/>
+        <properties name="Symbols.Size/Network.client.tcp receive window" value="6"/>
+        <properties name="Line.Type/Network.client.tcp receive window" value="SampleHold"/>
+      </items>
+    </datasets>
+    <datasets name="set2">
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/FlowControl-1.vec) AND attr:configname(FlowControl) AND attr:runnumber(1) AND module(Network.server.tcp) AND name(&quot;sent seq&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/FlowControl-1.vec) AND attr:configname(FlowControl) AND attr:runnumber(1) AND module(Network.client.tcp) AND name(&quot;receive window&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:LineChart" name="45 ms Vearbeitungszeit" lineNameFormat="">
+        <properties name="Graph.Title" value="45 ms Vearbeitungszeit"/>
+        <properties name="Graph.Title.Font" value="Arial-regular-16"/>
+        <properties name="X.Axis.Title" value="Zeit"/>
+        <properties name="Y.Axis.Title" value="Sequenznummer bzw. Bytemenge"/>
+        <properties name="Axis.Title.Font" value="Arial-regular-16"/>
+        <properties name="Label.Font" value="Arial-regular-16"/>
+        <properties name="Line.Type" value="Dots"/>
+        <properties name="Line.Type/Network.client.tcp receive window" value="SampleHold"/>
+      </items>
+    </datasets>
+    <datasets name="set3">
+      <items xsi:type="scave:Add" filterPattern="module(Network.client.tcp) AND name(&quot;receive window&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:LineChart" name="Receive Windows" lineNameFormat="">
+        <properties name="Line.Display//ks-dev/simulations/transport/results/FlowControl-1.vec FlowControl-1-20160828-14:10:08-95353 1 $advertisedWindow=3000, $processingTime=45" value="false"/>
+        <properties name="Line.Display//ks-dev/simulations/transport/results/FlowControl-3.vec FlowControl-3-20160828-14:10:08-95360 3 $advertisedWindow=5000, $processingTime=45" value="false"/>
+        <properties name="Line.Display//ks-dev/simulations/transport/results/FlowControl-5.vec FlowControl-5-20160828-14:10:08-95356 5 $advertisedWindow=7000, $processingTime=45" value="false"/>
+        <properties name="Line.Display//ks-dev/simulations/transport/results/FlowControl-7.vec FlowControl-7-20160828-14:10:08-95358 7 $advertisedWindow=9000, $processingTime=45" value="false"/>
+        <properties name="Line.Type" value="SampleHold"/>
+        <properties name="Line.Type//ks-dev/simulations/transport/results/FlowControl-2.vec FlowControl-2-20160828-14:10:08-95357 2 $advertisedWindow=4000, $processingTime=45" value="SampleHold"/>
+        <properties name="Line.Type//ks-dev/simulations/transport/results/FlowControl-1.vec FlowControl-1-20160828-14:10:08-95353 1 $advertisedWindow=3000, $processingTime=45" value="SampleHold"/>
+        <properties name="Line.Type//ks-dev/simulations/transport/results/FlowControl-3.vec FlowControl-3-20160828-14:10:08-95360 3 $advertisedWindow=5000, $processingTime=45" value="SampleHold"/>
+        <properties name="Line.Type//ks-dev/simulations/transport/results/FlowControl-5.vec FlowControl-5-20160828-14:10:08-95356 5 $advertisedWindow=7000, $processingTime=45" value="SampleHold"/>
+        <properties name="Line.Type//ks-dev/simulations/transport/results/FlowControl-7.vec FlowControl-7-20160828-14:10:08-95358 7 $advertisedWindow=9000, $processingTime=45" value="SampleHold"/>
+      </items>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.2/@items.1"/>
+    <chartSheets name="Verarbeitungszeit" charts="//@datasets/@datasets.0/@items.2 //@datasets/@datasets.1/@items.2"/>
+  </chartSheets>
+</scave:Analysis>

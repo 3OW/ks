@@ -1,0 +1,164 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>HttpTcpClientApp</i></h2>
+<b>Package:</b> ks.application.tcp<br/><b>File: <a href="src-application-tcp-HttpTcpClientApp.ned.html">src/application/tcp/HttpTcpClientApp.ned</a></b><br/><p><a href="../doxy/classHttpTcpClientApp.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>Ein HTTP-Client-Modul, das &uuml;ber einen kompletten Netzwerkstack mittels TCP  mit einem HTTP-Server-Modul kommuniziert.</p>
+<p>Das Modul ist als TCPApp ausgef&uuml;hrt und kann deshalb als Anwendung mit einem StandardHost-Modul verwendet werden.</p>
+<img src="ks.application.tcp.HttpTcpClientApp-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="ks.application.tcp.HttpTcpClientApp.html" title="HttpTcpClientApp" alt="HttpTcpClientApp" coords="0,35,162,75">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram.</p>
+<img src="ks.application.tcp.HttpTcpClientApp-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="ks.application.tcp.HttpTcpClientApp.html" title="Simple Module HttpTcpClientApp" alt="" coords="5,5,132,31">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram.</p>
+<img src="ks.application.tcp.HttpTcpClientApp-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="ks.application.tcp.HttpTcpClientApp.html" title="Simple Module HttpTcpClientApp" alt="" coords="5,79,132,104">
+<area shape="rect" id="node2" href="../../../inet/doc/neddoc/inet.applications.contract.ITCPApp.html" title="Module Interface ITCPApp" alt="" coords="31,5,107,31">
+</map>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>httpHost</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>&lt; Hostname f&uuml;r Host-Feld im HTTP-Request</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>page</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>&lt; Name des Dokuments im HTTP-Request</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>connectAddress</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>Die IP-Adresse (der Name kann verwendet werden) des Servers.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>connectPort</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>Die Portadresse des Servers.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>processingTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Die Zeit (je Empfang), die der Client zum Verarbeiten 
+der vom Server empfangenen Daten ben&ouml;tigt.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>localPort</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2080</td>
+   <td>
+<p>Die eigene Portadresse.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>localAddress</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>IP-Adresse, die beim Senden verwendet wird; hier: automatisch festgelegt.</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>dataTransferMode</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"bytestream"</td>
+   <td>
+<p>Es werden reale Daten &uuml;bertragen.</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>tcpIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td></td>
+</tr>
+<tr class="local">
+   <td>tcpOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Ein HTTP-Client-Modul, das &uuml;ber einen kompletten Netzwerkstack mittels TCP  mit einem HTTP-Server-Modul kommuniziert.
+//
+// Das Modul ist als TCPApp ausgef&uuml;hrt und kann deshalb als Anwendung mit einem StandardHost-Modul verwendet werden.
+//
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">HttpTcpClientApp</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">ITCPApp</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">httpHost</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">//&lt; Hostname f&uuml;r Host-Feld im HTTP-Request 
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">page</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">//&lt; Name des Dokuments im HTTP-Request 
+</span><span style="color: #000000; ">
+        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">connectAddress</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// Die IP-Adresse (der Name kann verwendet werden) des Servers.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">connectPort</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// Die Portadresse des Servers.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">volatile</span><span style="color: #000000; "> </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">processingTime</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// Die Zeit (je Empfang), die der Client zum Verarbeiten 
+</span><span style="color: #000000; ">        																						 </span><span style="color: #808080; font-style: italic; ">// der vom Server empfangenen Daten ben&ouml;tigt.
+</span><span style="color: #000000; ">
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">localPort</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">2080</span><span style="color: #000000; ">);	</span><span style="color: #808080; font-style: italic; ">// Die eigene Portadresse.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">localAddress</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// IP-Adresse, die beim Senden verwendet wird; hier: automatisch festgelegt.
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">dataTransferMode</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bytestream&quot;</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// Es werden reale Daten &uuml;bertragen.
+</span><span style="color: #000000; ">
+    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">tcpIn</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">output</span><span style="color: #000000; "> </span><span style="color: #000000; ">tcpOut</span><span style="color: #000000; ">;
+}
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

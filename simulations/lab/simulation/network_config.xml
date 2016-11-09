@@ -1,0 +1,24 @@
+<config>
+
+<!-- Netzwerk-Interfaces werden ohne "g" und '[]‘ notiert: ethg[0] -> eth0 -->
+
+<!-- RouterM -->
+<interface hosts='RouterM' address='192.168.5.1' netmask='255.255.255.0' names='eth0'/>
+
+<route hosts='RouterM'  destination='192.168.1.0' netmask='255.255.255.0' gateway='192.168.5.2' interface='eth0'/>
+
+<!-- HostA -->
+<interface hosts='HostA' address='192.168.1.10' netmask='255.255.255.0' names='eth0'/>
+
+<route hosts='HostA'  destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.1.1' interface='eth0'/>
+
+<!-- RouterA -->
+<interface hosts='RouterA' address='192.168.1.1' netmask='255.255.255.0' names='eth0'/>
+
+<!-- HttpServerA -->
+				
+<!-- HostB -->
+
+<!-- RouterB -->
+				
+</config>

@@ -1,0 +1,5 @@
+<area shape="rect" id="node1" href="ks.simulations.internet.smallnet.Network.html" title="Network Network" alt="" coords="181,5,253,31">
+<area shape="rect" id="node2" href="ks.simulations.internet.smallnet.Network.cable.html" title="Channel cable" alt="" coords="5,79,77,104">
+<area shape="rect" id="node3" href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html" title="Compound Module BurstHost" alt="" coords="102,79,183,104">
+<area shape="rect" id="node4" href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" title="Simple Module IPv4NetworkConfigurator" alt="" coords="207,79,377,104">
+<area shape="rect" id="node5" href="../../../inet/doc/neddoc/inet.node.inet.Router.html" title="Compound Module Router" alt="" coords="401,79,473,104">

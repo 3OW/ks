@@ -1,0 +1,938 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Network <i>Network</i></h2>
+<b>Package:</b> ks.simulations.netzwerkzugang<br/><b>File: <a href="simulations-netzwerkzugang-Network.ned.html">simulations/netzwerkzugang/Network.ned</a></b><br/>
+<p>Sample Ethernet LAN: four hosts connected to two switches.</p>
+<img src="ks.simulations.netzwerkzugang.Network-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.common.scenario.ScenarioManager.html" title="ScenarioManager" alt="ScenarioManager" coords="530,70,638,119">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html" title="EtherHost" alt="EtherHost" coords="64,93,108,158">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html" title="EtherHost" alt="EtherHost" coords="240,93,284,158">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html" title="EtherHost" alt="EtherHost" coords="488,239,532,304">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html" title="EtherHost" alt="EtherHost" coords="307,239,351,304">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html" title="EtherSwitch" alt="EtherSwitch" coords="138,169,190,221">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html" title="EtherSwitch" alt="EtherSwitch" coords="380,178,432,230">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram.</p>
+<img src="ks.simulations.netzwerkzugang.Network-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="ks.simulations.netzwerkzugang.Network.html" title="Network Network" alt="" coords="168,5,240,31">
+<area shape="rect" id="node2" href="ks.simulations.netzwerkzugang.Network.TPcable.html" title="Channel TPcable" alt="" coords="5,79,77,104">
+<area shape="rect" id="node3" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html" title="Compound Module EtherSwitch" alt="" coords="101,79,195,104">
+<area shape="rect" id="node4" href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html" title="Compound Module EtherHost" alt="" coords="219,79,301,104">
+<area shape="rect" id="node5" href="../../../inet/doc/neddoc/inet.common.scenario.ScenarioManager.html" title="Simple Module ScenarioManager" alt="" coords="325,79,448,104">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram.</p>
+<img src="ks.simulations.netzwerkzugang.Network-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="ks.simulations.netzwerkzugang.Network.html" title="Network Network" alt="" coords="5,5,77,31">
+</map>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>isNetwork</td>
+   <td><i></i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>display</td>
+   <td><i>bgb=653,267</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.common.scenario.ScenarioManager.html">scenarioManager</a>.script</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xml("<script></script>")</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.destAddress</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>destination MAC address, or module path name of destination station; empty means off</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.startTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>this.sendInterval</td>
+   <td>
+<p>time of sending the first request</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.stopTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1s</td>
+   <td>
+<p>time of finishing sending, negative values mean forever</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.localSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.remoteSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf1</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.sendInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0s,1s)</td>
+   <td>
+<p>interval between sending requests</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.reqLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100B</td>
+   <td>
+<p>length of request packets</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.respLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1KiB</td>
+   <td>
+<p>length of response packets</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppSrv.html">srv</a>.localSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf1</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.ethernet.EtherQoSQueue.html">queue</a>.<a href="../../../inet/doc/neddoc/inet.common.queue.DropTailQueue.html">pauseQueue</a>.frameCapacity</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.promiscuous</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>if true, all packets are received, otherwise only the
+ones with matching destination MAC address</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>MAC address as hex string (12 hex digits), or
+"auto". "auto" values will be replaced by
+a generated MAC address in init stage 0.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.duplexMode</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>selects full-duplex (true) or half-duplex (false) operation</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.txQueueLimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>maximum number of frames queued up for transmission;
+additional frames are dropped. Only used if queueModule==""</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostA</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.destAddress</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>destination MAC address, or module path name of destination station; empty means off</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.startTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>this.sendInterval</td>
+   <td>
+<p>time of sending the first request</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.stopTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1s</td>
+   <td>
+<p>time of finishing sending, negative values mean forever</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.localSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.remoteSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf1</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.sendInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0s,1s)</td>
+   <td>
+<p>interval between sending requests</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.reqLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100B</td>
+   <td>
+<p>length of request packets</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.respLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1KiB</td>
+   <td>
+<p>length of response packets</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppSrv.html">srv</a>.localSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf1</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.ethernet.EtherQoSQueue.html">queue</a>.<a href="../../../inet/doc/neddoc/inet.common.queue.DropTailQueue.html">pauseQueue</a>.frameCapacity</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.promiscuous</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>if true, all packets are received, otherwise only the
+ones with matching destination MAC address</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>MAC address as hex string (12 hex digits), or
+"auto". "auto" values will be replaced by
+a generated MAC address in init stage 0.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.duplexMode</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>selects full-duplex (true) or half-duplex (false) operation</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.txQueueLimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>maximum number of frames queued up for transmission;
+additional frames are dropped. Only used if queueModule==""</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostB</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.destAddress</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>destination MAC address, or module path name of destination station; empty means off</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.startTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>this.sendInterval</td>
+   <td>
+<p>time of sending the first request</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.stopTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1s</td>
+   <td>
+<p>time of finishing sending, negative values mean forever</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.localSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.remoteSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf1</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.sendInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0s,1s)</td>
+   <td>
+<p>interval between sending requests</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.reqLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100B</td>
+   <td>
+<p>length of request packets</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.respLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1KiB</td>
+   <td>
+<p>length of response packets</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppSrv.html">srv</a>.localSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf1</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.ethernet.EtherQoSQueue.html">queue</a>.<a href="../../../inet/doc/neddoc/inet.common.queue.DropTailQueue.html">pauseQueue</a>.frameCapacity</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.promiscuous</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>if true, all packets are received, otherwise only the
+ones with matching destination MAC address</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>MAC address as hex string (12 hex digits), or
+"auto". "auto" values will be replaced by
+a generated MAC address in init stage 0.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.duplexMode</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>selects full-duplex (true) or half-duplex (false) operation</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.txQueueLimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>maximum number of frames queued up for transmission;
+additional frames are dropped. Only used if queueModule==""</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostC</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.destAddress</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>destination MAC address, or module path name of destination station; empty means off</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.startTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>this.sendInterval</td>
+   <td>
+<p>time of sending the first request</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.stopTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1s</td>
+   <td>
+<p>time of finishing sending, negative values mean forever</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.localSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.remoteSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf1</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.sendInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>uniform(0s,1s)</td>
+   <td>
+<p>interval between sending requests</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.reqLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100B</td>
+   <td>
+<p>length of request packets</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppCli.html">cli</a>.respLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1KiB</td>
+   <td>
+<p>length of response packets</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.applications.ethernet.EtherAppSrv.html">srv</a>.localSAP</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0xf1</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.ethernet.EtherQoSQueue.html">queue</a>.<a href="../../../inet/doc/neddoc/inet.common.queue.DropTailQueue.html">pauseQueue</a>.frameCapacity</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.promiscuous</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>if true, all packets are received, otherwise only the
+ones with matching destination MAC address</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>MAC address as hex string (12 hex digits), or
+"auto". "auto" values will be replaced by
+a generated MAC address in init stage 0.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.duplexMode</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>selects full-duplex (true) or half-duplex (false) operation</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.txQueueLimit</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>maximum number of frames queued up for transmission;
+additional frames are dropped. Only used if queueModule==""</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherHost.html">hostD</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IEtherMAC.html">mac</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.configurator.L2NodeConfigurator.html">l2NodeConfigurator</a>.interfaceTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.configurator.L2NodeConfigurator.html">l2NodeConfigurator</a>.l2ConfiguratorModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"l2NetworkConfigurator"</td>
+   <td>
+<p>the absolute path to the L2NetworkConfigurator; use "" if there is no configurator</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.common.InterfaceTable.html">interfaceTable</a>.displayAddresses</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>whether to display IP addresses on links</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IMACAddressTable.html">macTable</a>.agingTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IMACAddressTable.html">macTable</a>.addressTableFile</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.helloTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.forwardDelay</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.maxAge</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.bridgePriority</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.visualize</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.configurator.L2NodeConfigurator.html">l2NodeConfigurator</a>.interfaceTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.configurator.L2NodeConfigurator.html">l2NodeConfigurator</a>.l2ConfiguratorModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"l2NetworkConfigurator"</td>
+   <td>
+<p>the absolute path to the L2NetworkConfigurator; use "" if there is no configurator</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.common.InterfaceTable.html">interfaceTable</a>.displayAddresses</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>whether to display IP addresses on links</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IMACAddressTable.html">macTable</a>.agingTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.IMACAddressTable.html">macTable</a>.addressTableFile</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.helloTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.forwardDelay</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.maxAge</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.bridgePriority</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.ethernet.EtherSwitch.html">switch2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.contract.ISpanningTree.html">stp</a>.visualize</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Sample Ethernet LAN: four hosts connected to two switches.
+//
+</span><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">Network</span><span style="color: #000000; ">
+
+{
+    </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgb=653,267&quot;</span><span style="color: #000000; ">);
+    </span><span style="color: #800000; font-weight: bold; ">types</span><span style="color: #000000; ">:
+        </span><span style="color: #800000; font-weight: bold; ">channel</span><span style="color: #000000; "> </span><span style="color: #000000; ">TPcable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; ">
+        {
+            </span><span style="color: #000000; ">delay</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">1</span><span style="color: #000000; ">us</span><span style="color: #000000; ">;  </span><span style="color: #808080; font-style: italic; ">// ca. 20 m Kabell&auml;nge
+</span><span style="color: #000000; ">            </span><span style="color: #000000; ">datarate</span><span style="color: #000000; "> = </span><span style="color: #008000; ">100</span><span style="color: #000000; ">Mbps</span><span style="color: #000000; ">;
+        }
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">scenarioManager</span><span style="color: #000000; ">: </span><span style="color: #000000; ">ScenarioManager</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=582,24&quot;</span><span style="color: #000000; ">);
+        }
+
+        </span><span style="color: #000000; ">hostA</span><span style="color: #000000; ">: </span><span style="color: #000000; ">EtherHost</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=82,55&quot;</span><span style="color: #000000; ">);
+        }
+
+        </span><span style="color: #000000; ">hostB</span><span style="color: #000000; ">: </span><span style="color: #000000; ">EtherHost</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=258,55&quot;</span><span style="color: #000000; ">);
+        }
+
+        </span><span style="color: #000000; ">hostC</span><span style="color: #000000; ">: </span><span style="color: #000000; ">EtherHost</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=506,201&quot;</span><span style="color: #000000; ">);
+        }
+
+        </span><span style="color: #000000; ">hostD</span><span style="color: #000000; ">: </span><span style="color: #000000; ">EtherHost</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=325,201&quot;</span><span style="color: #000000; ">);
+        }
+
+        </span><span style="color: #000000; ">switch1</span><span style="color: #000000; ">: </span><span style="color: #000000; ">EtherSwitch</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=162,124&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">4</span><span style="color: #000000; ">];
+        }
+
+        </span><span style="color: #000000; ">switch2</span><span style="color: #000000; ">: </span><span style="color: #000000; ">EtherSwitch</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=404,133&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">4</span><span style="color: #000000; ">];
+        }
+
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">allowunconnected</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">switch1</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">0</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">TPcable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">hostA</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">switch1</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">TPcable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">hostB</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">switch2</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">0</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">TPcable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">hostC</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">switch2</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">TPcable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">hostD</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">;
+
+        </span><span style="color: #000000; ">switch1</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">2</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">TPcable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">switch2</span><span style="color: #000000; ">.</span><span style="color: #000000; ">ethg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">2</span><span style="color: #000000; ">];
+}
+
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

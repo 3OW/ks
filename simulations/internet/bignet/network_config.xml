@@ -1,0 +1,113 @@
+<config>
+
+<!-- Netzwerk-Interfaces werden ohne "g" und '[]‘ notiert: pppg[0] -> ppp0 -->
+
+<!--
+insgesamt 64 Subnetze a 2 Endgeräte (von den Subnetzmasken ist nur das letzte Byte dargestellt):
+
+	Masken:
+	0000 0000		/24	0
+	
+	1100 0000		/26	192
+	1110 0000		/27	224
+	1111 0000		/28	240
+	1111 1000		/29	248
+	1111 1100		/30	252
+	
+	Maske					Netzweradresse		Maske		1. Adresse				2.Adresse
+	0000 0000		 	199.168.1.0    		/30			199.168.1.1, 		199.168.1.2 			2. Etage, Firma A
+	0000 0100			199.168.1.4  		/30			199.168.1.5, 		199.168.1.6
+	0000 1000			199.168.1.8  		/30			199.168.1.9, 		199.168.1.10
+	0000 1100			199.168.1.12  		/30			199.168.1.13, 		199.168.1.14
+			
+	0001 0000			199.168.1.16  		/30			199.168.1.17, 		199.168.1.18		2. Etage, Firma B
+	...			
+	0010 0000			199.168.1.32  		/30			199.168.1.33, 		199.168.1.34		1. Etage, Firma C
+	...			
+	0011 0000			199.168.1.48  		/30			199.168.1.49, 		199.168.1.50		1. Etage, Firma D
+	...
+	0100 0000			199.168.1.64  		/30			199.168.1.65, 		199.168.1.66		Keller, Server
+	... 
+-->
+
+<!-- Router Provider -->
+<interface hosts='RProvider' address='1.1.1.1' netmask='255.255.255.0' names='ppp0'/>
+<interface hosts='RProvider' address='1.1.2.1' netmask='255.255.255.0' names='ppp1'/>
+<interface hosts='RProvider' address='91.12.77.21' netmask='255.255.255.252' names='ppp2'/>
+
+<route hosts='RProvider' destination='199.168.1.0' netmask='255.255.255.255' gateway='91.12.77.22' interface='ppp2'/>	<!-- in die Firma -->
+
+<!-- HostX, externer Host -->
+<interface hosts='hostX' address='1.1.1.2' netmask='255.255.255.0'/>
+<route hosts='hostX' destination='0.0.0.0' netmask='0.0.0.0' gateway='1.1.1.1' interface="ppp0"/>
+
+<!-- HostY , externer Host-->
+<interface hosts='hostY' address='1.1.2.2' netmask='255.255.255.0'/>
+<route hosts='hostY' destination='0.0.0.0' netmask='0.0.0.0' gateway='1.1.2.1' interface="ppp0"/>
+
+<!-- Client 1 -->
+<interface hosts='client1' address='199.168.1.2' netmask='255.255.255.252'/>
+<route hosts='client1' destination='0.0.0.0' netmask='0.0.0.0' gateway='199.168.1.1' interface="ppp0"/>
+
+<!-- Client 2 -->
+<interface hosts='client2' address='199.168.1.18' netmask='255.255.255.252'/>
+<route hosts='client2' destination='0.0.0.0' netmask='0.0.0.0'  gateway='199.168.1.17' interface="ppp0"/>
+
+<!-- Client 3 -->
+<interface hosts='client3' address='199.168.1.34' netmask='255.255.255.252'/>
+<route hosts='client3' destination='0.0.0.0' netmask='0.0.0.0'  gateway='199.168.1.37' interface="ppp0"/>
+
+<!-- Client 4 -->
+<interface hosts='client4' address='199.168.1.38' netmask='255.255.255.252'/>
+<route hosts='client4' destination='0.0.0.0' netmask='0.0.0.0'  gateway='199.168.1.33' interface="ppp0"/>
+
+<!-- Server  -->
+<interface hosts='server' address='199.168.1.66' netmask='255.255.255.252'/>
+<route hosts='server' destination='0.0.0.0' netmask='0.0.0.0'  gateway='199.168.1.65' interface="ppp0"/>
+								
+<!-- RZentral -->
+<interface hosts='RZentral' address='91.12.77.22' netmask='255.255.255.252' names='ppp0'/>
+<interface hosts='RZentral' address='10.0.0.1' netmask='255.255.255.252' names='ppp1'/>
+<interface hosts='RZentral' address='10.0.0.5' netmask='255.255.255.252' names='ppp2'/>
+<interface hosts='RZentral' address='199.168.1.65' netmask='255.255.255.252' names='ppp3'/>
+
+<route hosts='RZentral' destination='199.168.1.0' netmask='255.255.255.224' gateway='10.0.0.2' interface='ppp1'/> 					<!-- REtage2 -->
+<route hosts='RZentral' destination='199.168.1.0' netmask='255.255.255.0' gateway='10.0.0.6' interface='ppp2'/>  						<!-- REtage1 -->
+<route hosts='RZentral' destination='199.168.1.66' netmask='255.255.255.255' gateway='199.168.1.65' interface='ppp3'/>			<!-- Server -->
+
+<!-- REtage1 -->
+<interface hosts='REtage1' address='10.0.0.17' netmask='255.255.255.252' names='ppp1'/>
+<interface hosts='REtage1' address='10.0.0.6' netmask='255.255.255.252' names='ppp0'/>
+
+<route hosts='REtage1' destination='199.168.1.32' netmask='255.255.255.224'  gateway='10.0.0.18' interface='ppp1'/>		<!-- RFirmaC -->
+<route hosts='REtage1' destination='0.0.0.0' netmask='0.0.0.0'  gateway='10.0.0.5' interface='ppp0'/>									<!-- default: RZentral -->
+
+<!-- REtage2 -->
+<interface hosts='REtage2' address='10.0.0.9' netmask='255.255.255.252' names='ppp1'/>	
+<interface hosts='REtage2' address='10.0.0.13' netmask='255.255.255.252' names='ppp2'/>
+<interface hosts='REtage2' address='10.0.0.2' netmask='255.255.255.252' names='ppp0'/>
+
+<route hosts='REtage2' destination='199.168.1.0' netmask='255.255.255.240'  gateway='10.0.0.10' interface='ppp1'/>	 			<!-- RFirmaA -->
+<route hosts='REtage2' destination='199.168.1.16' netmask='255.255.255.240'  gateway='10.0.0.14' interface='ppp2'/>			<!-- RFirmaB -->
+<route hosts='REtage2' destination='0.0.0.0' netmask='0.0.0.0'  gateway='10.0.0.1' interface='ppp0'/>										<!-- default: RZentral -->
+
+<!-- RFirmaA -->
+<interface hosts='RFirmaA' address='199.168.1.1' netmask='255.255.255.252' names='ppp1'/>
+<interface hosts='RFirmaA' address='10.0.0.10' netmask='255.255.255.252' names='ppp0'/>													<!-- REtage2-->
+
+<route hosts='RFirmaA' destination='0.0.0.0' netmask='0.0.0.0'  gateway='10.0.0.9' interface='ppp0'/>									<!-- default: REtage2 -->
+
+<!-- RFirmaB -->
+<interface hosts='RFirmaB' address='199.168.1.17' netmask='255.255.255.252' names='ppp1'/>
+<interface hosts='RFirmaB' address='10.0.0.14' netmask='255.255.255.252' names='ppp0'/>
+
+<route hosts='RFirmaB' destination='0.0.0.0' netmask='0.0.0.0'  gateway='10.0.0.13' interface='ppp0'/>									<!-- default: REtage2 -->
+
+<!-- RFirmaC -->
+<interface hosts='RFirmaC' address='199.168.1.33' netmask='255.255.0.0' names='ppp1'/>
+<interface hosts='RFirmaC' address='199.168.1.37' netmask='255.255.0.0' names='ppp2'/>
+<interface hosts='RFirmaC' address='10.0.0.18' netmask='255.255.255.252' names='ppp0'/>
+
+<route hosts='RFirmaC' destination='0.0.0.0' netmask='0.0.0.0'  gateway='10.0.0.17' interface='ppp0'/>									<!-- default: REtage1 -->
+
+</config>

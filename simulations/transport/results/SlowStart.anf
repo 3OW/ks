@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/ks/simulations/transport/results/SlowStart-*.vec"/>
+    <inputs name="/ks/simulations/transport/results/SlowStart-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="set1">
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/SlowStart-0.vec) AND attr:configname(SlowStart) AND attr:runnumber(0) AND module(Network.client.tcp) AND name(&quot;rcvd seq&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/SlowStart-0.vec) AND attr:configname(SlowStart) AND attr:runnumber(0) AND module(Network.client.tcp) AND name(&quot;sent ack&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/SlowStart-0.vec) AND attr:configname(SlowStart) AND attr:runnumber(0) AND module(Network.server.tcp) AND name(&quot;sent seq&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:LineChart" name="dia1" lineNameFormat="">
+        <properties name="Graph.Title.Font" value="Arial-regular-16"/>
+        <properties name="X.Axis.Title" value="Zeit"/>
+        <properties name="Y.Axis.Title" value="Sequenznummer / für cwind: Bytemenge"/>
+        <properties name="Axis.Title.Font" value="Arial-regular-16"/>
+        <properties name="Label.Font" value="Arial-regular-16"/>
+        <properties name="Legend.Display" value="true"/>
+        <properties name="Legend.Font" value="Arial-regular-16"/>
+        <properties name="Line.Name/rcvd ack" value="client rcvd ack"/>
+        <properties name="Line.Name/rcvd seq" value="client rcvd seq"/>
+        <properties name="Line.Name/sent ack" value="client sent ack"/>
+        <properties name="Line.Type" value="SampleHold"/>
+        <properties name="Symbols.Size/Network.client.tcp sent ack" value="8"/>
+        <properties name="Line.Type/Network.client.tcp sent ack" value="Dots"/>
+        <properties name="Symbols.Size/Network.client.tcp rcvd seq" value="8"/>
+        <properties name="Line.Type/Network.client.tcp rcvd seq" value="SampleHold"/>
+        <properties name="Symbols.Size/Network.server.tcp sent seq" value="8"/>
+        <properties name="Line.Type/Network.server.tcp sent seq" value="SampleHold"/>
+        <properties name="Line.Name/Network.client.tcp rcvd seq" value="client.tcp rcvd seq"/>
+        <properties name="Line.Name/Network.client.tcp sent ack" value="client.tcp sent ack"/>
+        <properties name="Line.Type/Network.server.tcp cwnd" value="SampleHold"/>
+        <properties name="Line.Name/Network.server.tcp cwnd" value="server.tcp cwnd"/>
+        <properties name="Line.Name/Network.server.tcp sent seq" value="server.tcp sent seq"/>
+      </items>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.3"/>
+  </chartSheets>
+</scave:Analysis>

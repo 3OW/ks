@@ -1,0 +1,791 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Network <i>Network</i></h2>
+<b>Package:</b> ks.simulations.internet.smallnet<br/><b>File: <a href="simulations-internet-smallnet-Network.ned.html">simulations/internet/smallnet/Network.ned</a></b><br/><p>(no description)</p><img src="ks.simulations.internet.smallnet.Network-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" title="IPv4NetworkConfigurator" alt="IPv4NetworkConfigurator" coords="28,78,105,119">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.node.inet.Router.html" title="Router" alt="Router" coords="268,112,317,169">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.node.inet.Router.html" title="Router" alt="Router" coords="504,112,553,169">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html" title="BurstHost" alt="BurstHost" coords="13,234,57,295">
+<area shape="rect" href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html" title="BurstHost" alt="BurstHost" coords="693,224,743,305">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram.</p>
+<img src="ks.simulations.internet.smallnet.Network-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" id="node1" href="ks.simulations.internet.smallnet.Network.html" title="Network Network" alt="" coords="181,5,253,31">
+<area shape="rect" id="node2" href="ks.simulations.internet.smallnet.Network.cable.html" title="Channel cable" alt="" coords="5,79,77,104">
+<area shape="rect" id="node3" href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html" title="Compound Module BurstHost" alt="" coords="102,79,183,104">
+<area shape="rect" id="node4" href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" title="Simple Module IPv4NetworkConfigurator" alt="" coords="207,79,377,104">
+<area shape="rect" id="node5" href="../../../inet/doc/neddoc/inet.node.inet.Router.html" title="Compound Module Router" alt="" coords="401,79,473,104">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram.</p>
+<img src="ks.simulations.internet.smallnet.Network-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" id="node1" href="ks.simulations.internet.smallnet.Network.html" title="Network Network" alt="" coords="5,5,77,31">
+</map>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>isNetwork</td>
+   <td><i></i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>display</td>
+   <td><i>bgb=789,273</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html">configurator</a>.minLinkWeight</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1E-3</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html">configurator</a>.config</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xml("<config><interface hosts='**' address='10.x.x.x' netmask='255.x.x.x'/></config>")</td>
+   <td>
+<p>XML configuration parameters for IP address assignment and adding manual routes</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html">configurator</a>.dumpTopology</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>print extracted network topology to the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html">configurator</a>.dumpLinks</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>print recognized network links to the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html">configurator</a>.dumpAddresses</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>print assigned IP addresses for all interfaces to the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html">configurator</a>.dumpRoutes</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>print configured and optimized routing tables for all nodes to the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html">configurator</a>.dumpConfig</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>write configuration into the given config file that can be fed back to speed up subsequent runs (network configurations)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.contract.IRoutingTable.html">routingTable</a>.forwarding</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.contract.IRoutingTable.html">routingTable</a>.multicastForwarding</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.common.InterfaceTable.html">interfaceTable</a>.displayAddresses</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>whether to display IP addresses on links</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.verbose</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>whether to log packets on the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.pcapFile</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>the PCAP file to be written</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.snaplen</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>65535</td>
+   <td>
+<p>maximum number of bytes to record per packet</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.dumpBadFrames</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>enable dump of frames with hasBitError</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.moduleNamePatterns</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"wlan[*] eth[*] ppp[*] ext[*]"</td>
+   <td>
+<p>space-separated list of sibling module names to listen on</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.sendingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetSentToLower"</td>
+   <td>
+<p>space-separated list of outbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.receivingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetReceivedFromLower"</td>
+   <td>
+<p>space-separated list of inbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.alwaysFlush</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>flush the pcapFile after each write to ensure that all packets are captured in case of a crash</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.interfaceTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>The path to the InterfaceTable module</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4470B</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.routing.contract.IBGPRouting.html">bgp</a>.interfaceTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>The path to the InterfaceTable module</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.routing.contract.IBGPRouting.html">bgp</a>.routingTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.routing.contract.IBGPRouting.html">bgp</a>.ospfRoutingModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>hasOSPF ? "^.ospf" : ""</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router1</a>.<a href="../../../inet/doc/neddoc/inet.routing.contract.IBGPRouting.html">bgp</a>.dataTransferMode</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.contract.IRoutingTable.html">routingTable</a>.forwarding</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.contract.IRoutingTable.html">routingTable</a>.multicastForwarding</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.common.InterfaceTable.html">interfaceTable</a>.displayAddresses</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>whether to display IP addresses on links</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.verbose</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>whether to log packets on the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.pcapFile</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>the PCAP file to be written</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.snaplen</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>65535</td>
+   <td>
+<p>maximum number of bytes to record per packet</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.dumpBadFrames</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>enable dump of frames with hasBitError</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.moduleNamePatterns</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"wlan[*] eth[*] ppp[*] ext[*]"</td>
+   <td>
+<p>space-separated list of sibling module names to listen on</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.sendingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetSentToLower"</td>
+   <td>
+<p>space-separated list of outbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.receivingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetReceivedFromLower"</td>
+   <td>
+<p>space-separated list of inbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.alwaysFlush</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>flush the pcapFile after each write to ensure that all packets are captured in case of a crash</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.interfaceTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>The path to the InterfaceTable module</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4470B</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.routing.contract.IBGPRouting.html">bgp</a>.interfaceTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>The path to the InterfaceTable module</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.routing.contract.IBGPRouting.html">bgp</a>.routingTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.routing.contract.IBGPRouting.html">bgp</a>.ospfRoutingModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>hasOSPF ? "^.ospf" : ""</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.node.inet.Router.html">router2</a>.<a href="../../../inet/doc/neddoc/inet.routing.contract.IBGPRouting.html">bgp</a>.dataTransferMode</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.contract.IRoutingTable.html">routingTable</a>.forwarding</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.contract.IRoutingTable.html">routingTable</a>.multicastForwarding</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.common.InterfaceTable.html">interfaceTable</a>.displayAddresses</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>whether to display IP addresses on links</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.verbose</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>whether to log packets on the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.pcapFile</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>the PCAP file to be written</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.snaplen</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>65535</td>
+   <td>
+<p>maximum number of bytes to record per packet</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.dumpBadFrames</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>enable dump of frames with hasBitError</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.moduleNamePatterns</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"wlan[*] eth[*] ppp[*] ext[*]"</td>
+   <td>
+<p>space-separated list of sibling module names to listen on</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.sendingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetSentToLower"</td>
+   <td>
+<p>space-separated list of outbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.receivingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetReceivedFromLower"</td>
+   <td>
+<p>space-separated list of inbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.alwaysFlush</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>flush the pcapFile after each write to ensure that all packets are captured in case of a crash</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.interfaceTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>The path to the InterfaceTable module</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">client</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4470B</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.lifecycle.NodeStatus.html">status</a>.initialStatus</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"UP"</td>
+   <td>
+<p>TODO @signal, @statistic</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.contract.IRoutingTable.html">routingTable</a>.forwarding</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.contract.IRoutingTable.html">routingTable</a>.multicastForwarding</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.networklayer.common.InterfaceTable.html">interfaceTable</a>.displayAddresses</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>whether to display IP addresses on links</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.verbose</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>whether to log packets on the module output</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.pcapFile</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>the PCAP file to be written</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.snaplen</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>65535</td>
+   <td>
+<p>maximum number of bytes to record per packet</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.dumpBadFrames</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>enable dump of frames with hasBitError</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.moduleNamePatterns</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"wlan[*] eth[*] ppp[*] ext[*]"</td>
+   <td>
+<p>space-separated list of sibling module names to listen on</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.sendingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetSentToLower"</td>
+   <td>
+<p>space-separated list of outbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.receivingSignalNames</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"packetReceivedFromLower"</td>
+   <td>
+<p>space-separated list of inbound packet signals to subscribe to</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.common.packet.PcapRecorder.html">pcapRecorder</a>.alwaysFlush</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>flush the pcapFile after each write to ensure that all packets are captured in case of a crash</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.interfaceTableModule</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>The path to the InterfaceTable module</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../inet/doc/neddoc/inet.examples.inet.routerperf.BurstHost.html">server</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.LoopbackInterface.html">lo0</a>.<a href="../../../inet/doc/neddoc/inet.linklayer.loopback.Loopback.html">lo</a>.mtu</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4470B</td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">Network</span><span style="color: #000000; ">
+{
+    </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgb=789,273&quot;</span><span style="color: #000000; ">);
+    </span><span style="color: #800000; font-weight: bold; ">types</span><span style="color: #000000; ">:
+        </span><span style="color: #800000; font-weight: bold; ">channel</span><span style="color: #000000; "> </span><span style="color: #000000; ">cable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; ">
+        {
+            </span><span style="color: #000000; ">delay</span><span style="color: #000000; "> = </span><span style="color: #008000; ">1</span><span style="color: #000000; ">us</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">datarate</span><span style="color: #000000; "> = </span><span style="color: #008000; ">100</span><span style="color: #000000; ">Mbps</span><span style="color: #000000; ">;
+        }
+
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+
+        </span><span style="color: #000000; ">configurator</span><span style="color: #000000; ">: </span><span style="color: #000000; ">IPv4NetworkConfigurator</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=64,28;is=vs&quot;</span><span style="color: #000000; ">);
+                </span><span style="color: #000000; ">assignAddresses</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+                </span><span style="color: #000000; ">assignDisjunctSubnetAddresses</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
+                </span><span style="color: #000000; ">addDefaultRoutes</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
+                </span><span style="color: #000000; ">addStaticRoutes</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
+                </span><span style="color: #000000; ">addSubnetRoutes</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
+                </span><span style="color: #000000; ">optimizeRoutes</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
+        }
+
+        </span><span style="color: #000000; ">router1</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Router</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=290,70&quot;</span><span style="color: #000000; ">);
+
+            </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">2</span><span style="color: #000000; ">];
+        }
+
+        </span><span style="color: #000000; ">router2</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Router</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=526,70&quot;</span><span style="color: #000000; ">);
+
+            </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">2</span><span style="color: #000000; ">];
+        }
+
+        </span><span style="color: #000000; ">client</span><span style="color: #000000; ">: </span><span style="color: #000000; ">BurstHost</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=device/laptop;p=31,194&quot;</span><span style="color: #000000; ">);
+
+            </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">];
+        }
+
+        </span><span style="color: #000000; ">server</span><span style="color: #000000; ">: </span><span style="color: #000000; ">BurstHost</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=714,194;i=device/server_l&quot;</span><span style="color: #000000; ">);
+
+            </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">];
+        }
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">router1</span><span style="color: #000000; ">.</span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">cable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">client</span><span style="color: #000000; ">.</span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">0</span><span style="color: #000000; ">];
+        </span><span style="color: #000000; ">router2</span><span style="color: #000000; ">.</span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">cable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">server</span><span style="color: #000000; ">.</span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">0</span><span style="color: #000000; ">];
+        </span><span style="color: #000000; ">router1</span><span style="color: #000000; ">.</span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">0</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">cable</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">router2</span><span style="color: #000000; ">.</span><span style="color: #000000; ">pppg</span><span style="color: #000000; ">[</span><span style="color: #008000; ">0</span><span style="color: #000000; ">];
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

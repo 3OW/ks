@@ -1,0 +1,152 @@
+----------------------------------------------------------------------
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: tkenv.cc#970: domain error: argument not in valid range
+    while executing
+"expr int(floor(log10($fesmin)))"
+    invoked from within
+"if [expr $fesmin!=0 && $fesmax!=0] {
+        set fesminexp [expr int(floor(log10($fesmin)))]
+        set fesmaxexp [expr int(ceil(log10($fesmax)))]
+  ..."
+    (procedure "redrawTimeline" line 29)
+    invoked from within
+"redrawTimeline"
+
+

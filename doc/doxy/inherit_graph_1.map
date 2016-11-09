@@ -1,0 +1,16 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classks_1_1TCPSocket_1_1CallbackInterface.html" title="Abstract base class for your callback objects. " alt="" coords="1068,31,1291,57"/>
+<area shape="rect" id="node2" href="$classHttpTcpClientApp.html" title="Ein HTTP&#45;Client&#45;Anwendungs&#45;Modul, das über einen kompletten Netzwerkstack mittels TCP mit einem HTTP&#45;..." alt="" coords="1341,5,1467,32"/>
+<area shape="rect" id="node3" href="$classHttpTcpServerApp.html" title="Ein HTTP&#45;Server&#45;Anwendungs&#45;Modul, das über einen kompletten Netzwerkstack mittels TCP mit einem HTTP&#45;..." alt="" coords="1339,56,1469,83"/>
+<area shape="rect" id="node4" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classcObject.html" title="cObject" alt="" coords="5,69,72,96"/>
+<area shape="rect" id="node5" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classcNamedObject.html" title="cNamedObject" alt="" coords="120,69,229,96"/>
+<area shape="rect" id="node6" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classcOwnedObject.html" title="cOwnedObject" alt="" coords="277,69,385,96"/>
+<area shape="rect" id="node7" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classcNoncopyableOwnedObject.html" title="cNoncopyableOwnedObject" alt="" coords="433,95,617,121"/>
+<area shape="rect" id="node8" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classcDefaultList.html" title="cDefaultList" alt="" coords="665,95,757,121"/>
+<area shape="rect" id="node9" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classcComponent.html" title="cComponent" alt="" coords="805,95,901,121"/>
+<area shape="rect" id="node10" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classcModule.html" title="cModule" alt="" coords="949,95,1020,121"/>
+<area shape="rect" id="node11" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classcSimpleModule.html" title="cSimpleModule" alt="" coords="1124,95,1235,121"/>
+<area shape="rect" id="node12" href="$classHttpDirectClient.html" title="HTTP&#45;Client&#45;Modul mit direkter Kommunikation mit einem HTTP&#45;Server&#45;Modul. " alt="" coords="1346,107,1462,133"/>
+<area shape="rect" id="node13" href="$classHttpDirectServer.html" title="HTTP&#45;Server&#45;Modul mit direkter Kommunikation mit einem HTTP&#45;Client&#45;Modul. " alt="" coords="1344,157,1464,184"/>
+<area shape="rect" id="node14" href="/home/praktikum/praktikum/omnetpp-4.6/doc/api/opptags.xml$classnoncopyable.html" title="noncopyable" alt="" coords="284,120,379,147"/>
+</map>
