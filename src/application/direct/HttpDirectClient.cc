@@ -19,7 +19,7 @@ void HttpDirectClient::initialize() {
     string req = string("HttpRequest fuer ") + string(page);
     RawPacket *packet = new RawPacket(req.c_str());
 
-    httpRequest = "";
+    httpRequest = "GET http://lab.ks.de/page1 HTTP/1.0";
 
     // HTTP-Nachricht erstellen lasssen
     prepareRequest(httpRequest, packet);
