@@ -25,6 +25,7 @@ void prepareReply(char *request, RawPacket *packet, int numBytes) {
 
     // Pfad zum bereitszustellenden Dokument extrahieren
     string result = parseGET(request);
+    string contentType;
 
     if (!isdigit(result[0])) {
         // Kein Fehler beim parsen aufgetreten
@@ -34,18 +35,16 @@ void prepareReply(char *request, RawPacket *packet, int numBytes) {
 
             // HTTP-body (HTML == Dokument) erzeugen
             document = "<html><body> Es wurde das Dokument '" + result + "' angefordert!</body></html>";
-
+            contentType = "text/html";
             // HTTP-Returncode
             retcode = CODE_200;
 
         } else if (result == "page2") {
             // hier muss eine bestimmte Menge Text erzeugt werden: Anzahl der Zeichen im Text = "numBytes"
-
-            /* ??? das ist nur ein Platzhalter ??? */
-            string documentN = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore ";
-
-            document = "<html><body>" + document + "</body></html>";
-
+            for (int i=0; i<numBytes; i++) {
+                document += 'a';
+            }
+            contentType = "text/plain";
             // HTTP-Returncode
             retcode = CODE_200;
 
@@ -55,6 +54,7 @@ void prepareReply(char *request, RawPacket *packet, int numBytes) {
 
             // HTTP-body (HTML == Dokument) erzeugen
             document = "<html><body>Datei nicht gefunden: " + retcode + "</body></html>";
+            contentType = "text/html";
         }
     } else  {
         // Fehler
@@ -63,11 +63,12 @@ void prepareReply(char *request, RawPacket *packet, int numBytes) {
 
         // HTTP-body (HTML == Dokument) erzeugen
         document = "<html><body>Fehler im HTTP-Request: " + retcode + "</body></html>";
+        contentType = "text/html";
     }
 
     // HTTP-Reply erzeugen
     reply = "HTTP/1.0 " + retcode + "\r\n"
-            "Content-Type: text/html\r\n"
+            "Content-Type: " + contentType + "\r\n"
             "Content-Length: " + to_string(document.length()) + "\r\n\r\n" +
             document;
 
@@ -135,5 +136,3 @@ string parseGET(string message) {
 //#############################################################################
 // ENDE Dieser Bereich ist durch Sie zu analysieren bzw. zu bearbeiten
 //#############################################################################
-
-
