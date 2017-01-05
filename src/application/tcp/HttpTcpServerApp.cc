@@ -14,7 +14,7 @@ void HttpTcpServerApp::initialize(int stage) {
         numBytes = par("numBytes");
 
         localPort = par("localPort");
-        localAddress = "";
+        localAddress = par("localAddress");
 
     } else if (stage == INITSTAGE_APPLICATION_LAYER) {
 

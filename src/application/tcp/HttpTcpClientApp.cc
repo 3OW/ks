@@ -22,7 +22,9 @@ void HttpTcpClientApp::initialize(int stage) {
         page = par("page");
         httpHost = par("httpHost");
 
-        httpRequest = "";
+        httpRequest = "GET /" + string(page) + " HTTP/1.0\r\n"
+                "Host: "+string(httpHost)+"\r\n Accept: */*\r\n";
+
 
     } else if (stage == INITSTAGE_APPLICATION_LAYER) {
 

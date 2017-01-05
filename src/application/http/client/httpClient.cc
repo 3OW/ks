@@ -16,9 +16,10 @@ namespace http {
 //#############################################################################
 
 bool headerArrived = false; /**<  Wird true wenn HTTP-Header empfangen wurde. */
-long contentLength; /**< Länge des gesamten bodies der HTTP-Nachricht */
+unsigned long contentLength; /**< Länge des gesamten bodies der HTTP-Nachricht */
 map<string, string> header; /**< HTTP-Header als Map: [Header-Feld-Name: Header-Feld-Wert], ... */
-
+string bodytmp = "";
+bool resetBody = true;
 string body; /**< der aktuelle HTTP-body */
 
 // Client:
@@ -62,8 +63,20 @@ string handleReply(char *resp) {
     /* ??? So erhält man z.B. die Länge der HTTP-Nachricht! ??? */
     contentLength = stol(header["Content-Length"]);
 
+    if (resetBody == true) bodytmp = "";
+    bodytmp += body;
+    if (contentLength > bodytmp.length()) {
+        resetBody = false;
+        cout << "BodyTmp: " << "length: " << bodytmp.length() << ", data:\n"  << endl;
+        cout << bodytmp << endl;
+        return "";
+    }
+    else {
     // HTTP-Body zurückliefern
-    return body;
+        cout << "Body returned successfully!!" << endl;
+        resetBody = true;
+        return bodytmp;
+    }
 }
 
 //---------------------------------------------------------------//
