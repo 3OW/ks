@@ -110,7 +110,7 @@ void HttpTcpClientApp::socketDataArrived(int connId, void *ptr, cPacket *msg,
     if (body.length() > 0) {
         // Empfang beendet
         EV << "HTTP-Body: Länge: " << body.length() << "\nHTTP:Body (max. 100 Zeichen);\n" << body.substr(0, min((int)body.size()-1, 100)) << endl;
-        cout << "HTTP-Body: Länge: " << body.length() << "\nHTTP:Body (max. 100 Zeichen);\n" << body.substr(0, min((int)body.size()-1, 100)) << endl;
+        cout << "HTTP-Body: Länge: " << body.length() << endl;
         socket.close();
     } else {
         // weiter empfangen

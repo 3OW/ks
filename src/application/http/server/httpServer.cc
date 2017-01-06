@@ -42,7 +42,8 @@ void prepareReply(char *request, RawPacket *packet, int numBytes) {
         } else if (result == "page2") {
             // hier muss eine bestimmte Menge Text erzeugt werden: Anzahl der Zeichen im Text = "numBytes"
             for (int i=0; i<numBytes; i++) {
-                document += 'a';
+                //document += 'a';
+                document += to_string(i % 10);
             }
             contentType = "text/plain";
             // HTTP-Returncode

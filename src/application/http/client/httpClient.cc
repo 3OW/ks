@@ -18,9 +18,11 @@ namespace http {
 bool headerArrived = false; /**<  Wird true wenn HTTP-Header empfangen wurde. */
 unsigned long contentLength; /**< Länge des gesamten bodies der HTTP-Nachricht */
 map<string, string> header; /**< HTTP-Header als Map: [Header-Feld-Name: Header-Feld-Wert], ... */
-string bodytmp = "";
-bool resetBody = true;
 string body; /**< der aktuelle HTTP-body */
+string bodytmp = "";    // if body is received by multiple TCP packets, append new text here
+bool resetBody = true;  // needed to reset the global variable bodytmp
+bool segmentation = false;  //helper for parseHttp
+
 
 // Client:
 //---------------------------------------------------------------//
@@ -69,12 +71,15 @@ string handleReply(char *resp) {
         resetBody = false;
         cout << "BodyTmp: " << "length: " << bodytmp.length() << ", data:\n"  << endl;
         cout << bodytmp << endl;
+        segmentation = true;
         return "";
+
     }
     else {
     // HTTP-Body zurückliefern
         cout << "Body returned successfully!!" << endl;
         resetBody = true;
+        segmentation = false;
         return bodytmp;
     }
 }
@@ -109,7 +114,8 @@ void parseHttp(string message, map<string, string> &headerMap, string &body) {
         }
     }
     // den Rest der HTTP-Nachricht als HTTP-Nutzdaten (body) kopieren
-    body = message.substr(message.find("\r\n\r\n") + 4);
+    if (segmentation == false) body = message.substr(message.find("\r\n\r\n") + 4);
+    if (segmentation == true) body = message.substr(message.find("\r\n\r\n")+1);
 }
 
 //#############################################################################
