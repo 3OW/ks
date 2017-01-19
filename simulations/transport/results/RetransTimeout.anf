@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
   <inputs>
     <inputs name="/ks/simulations/transport/results/RetransTimeout-*.vec"/>
     <inputs name="/ks/simulations/transport/results/RetransTimeout-*.sca"/>
   </inputs>
   <datasets>
-    <datasets name="set1"/>
+    <datasets name="set1">
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/RetransTimeout-0.vec) AND attr:configname(RetransTimeout) AND attr:runnumber(0) AND module(Network.client.tcp) AND name(&quot;rcvd seq&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="file(/ks/simulations/transport/results/RetransTimeout-0.vec) AND attr:configname(RetransTimeout) AND attr:runnumber(0) AND module(Network.server.tcp) AND name(&quot;rcvd ack&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:LineChart" name="" lineNameFormat="">
+        <properties name="X.Axis.Title" value="Zeit"/>
+        <properties name="Y.Axis.Title" value="Sequenznummer"/>
+        <properties name="Y.Axis.Min" value="45000.0"/>
+        <properties name="Y.Axis.Max" value="75000.0"/>
+        <properties name="Legend.Display" value="true"/>
+        <properties name="Line.Type" value="Dots"/>
+        <properties name="Line.Type/Network.client.tcp rcvd seq" value="Dots"/>
+      </items>
+    </datasets>
   </datasets>
   <chartSheets>
-    <chartSheets name="default"/>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.2"/>
   </chartSheets>
 </scave:Analysis>

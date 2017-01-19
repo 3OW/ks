@@ -1,0 +1,151 @@
+file 39018 1484787552                                           
+version 2
+run FlowControl-0-20170119-01:59:07-4171
+attr configname FlowControl
+attr datetime 20170119-01:59:07
+attr experiment FlowControl
+attr inifile omnetpp.ini
+attr iterationvars $processingTime=0
+attr iterationvars2 "$processingTime=0, $repetition=0"
+attr measurement $processingTime=0
+attr network Network
+attr processid 4171
+attr processingTime 0
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 8  Network.server.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 9  Network.server.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 24  Network.client.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 25  Network.client.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 71  Network.client.tcp  tcpRcvQueueBytes  ETV
+vector 58  Network.client.tcp  "advertised window"  ETV
+vector 57  Network.client.tcp  "receive window"  ETV
+vector 60  Network.client.tcp  "sent ack"  ETV
+vector 21  Network.client.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 23  Network.client.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 30  Network.client.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 26  Network.client.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 11  Network.server.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 15  Network.server.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 37  Network.server.tcp  "rcvd seq"  ETV
+vector 38  Network.server.tcp  "rcvd ack"  ETV
+vector 34  Network.server.tcp  "advertised window"  ETV
+vector 32  Network.server.tcp  "send window"  ETV
+vector 47  Network.server.tcp  tcpRcvQueueBytes  ETV
+vector 33  Network.server.tcp  "receive window"  ETV
+vector 36  Network.server.tcp  "sent ack"  ETV
+vector 5  Network.server.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 7  Network.server.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 14  Network.server.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 10  Network.server.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 27  Network.client.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 31  Network.client.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 61  Network.client.tcp  "rcvd seq"  ETV
+vector 62  Network.client.tcp  "rcvd ack"  ETV
+vector 56  Network.client.tcp  "send window"  ETV
+vector 59  Network.client.tcp  "sent seq"  ETV
+vector 63  Network.client.tcp  "unacked bytes"  ETV
+vector 39  Network.server.tcp  "unacked bytes"  ETV
+vector 40  Network.server.tcp  "rcvd dupAcks"  ETV
+vector 35  Network.server.tcp  "sent seq"  ETV
+vector 75  Network.client.tcp  "measured RTT"  ETV
+vector 76  Network.client.tcp  "smoothed RTT"  ETV
+vector 77  Network.client.tcp  RTTVAR  ETV
+vector 78  Network.client.tcp  RTO  ETV
+vector 73  Network.client.tcp  cwnd  ETV
+vector 64  Network.client.tcp  "rcvd dupAcks"  ETV
+vector 51  Network.server.tcp  "measured RTT"  ETV
+vector 52  Network.server.tcp  "smoothed RTT"  ETV
+vector 53  Network.server.tcp  RTTVAR  ETV
+vector 54  Network.server.tcp  RTO  ETV
+vector 49  Network.server.tcp  cwnd  ETV
+49	4526 894 67 800 0.100074 0.86106552 39 1072 21440 438984 6360446144
+51	5420 508 67 767 0.100074 0.8209812 19 0.0400504 0.04005416 0.76096136 0.030476957456186
+52	5928 597 67 767 0.100074 0.8209812 19 0.00500677 0.036882627085 0.502782970346 0.015003587205469
+53	6525 594 67 767 0.100074 0.8209812 19 0.067920082556 0.66125677 5.06962043893 1.9446078709463
+54	7119 454 67 767 0.100074 0.8209812 19 1 2.65003385 25.32146889456 38.644634600297
+32	7573 916 15 800 0.02000408 0.86106552 41 1464 2000 61932 94413648
+33	8489 978 15 780 0.02000408 0.82105424 42 65535 65535 2752470 180383121450
+34	9467 1001 15 780 0.02000408 0.82105424 43 65536 65589 2820182 184963412450
+35	10468 874 42 717 0.06001984 0.78097744 38 5002 24834 566884 9769574584
+36	11342 851 15 780 0.02000408 0.82105424 42 1 54 2176 115384
+37	12193 872 15 800 0.02000408 0.86106552 43 0 54 2123 112469
+38	13065 989 15 800 0.02000408 0.86106552 43 0 25071 647097 11680159429
+39	14054 1668 35 800 0.06001192 0.86106552 77 0 1308 57525 51490161
+40	15722 794 39 800 0.06001984 0.86106552 41 0 0 0 0
+47	16516 829 15 780 0.02000408 0.82105424 43 0 0 0 0
+73	17345 42 52 789 0.0800236 0.841058 2 1072 1608 2680 3734848
+75	17387 27 52 52 0.0800236 0.0800236 1 0.04001544 0.04001544 0.04001544 0.0016012354383936
+76	17414 27 52 52 0.0800236 0.0800236 1 0.00500193 0.00500193 0.00500193 2.50193037249e-05
+77	17441 27 52 52 0.0800236 0.0800236 1 0.66125193 0.66125193 0.66125193 0.43725411492872
+78	17468 27 52 52 0.0800236 0.0800236 1 2.65000965 2.65000965 2.65000965 7.0225511450931
+56	17495 67 22 789 0.04000816 0.841058 3 65535 65535 196605 12884508675
+57	17562 973 8 792 0 0.84106176 43 1464 2000 65932 102413648
+58	18535 1029 8 792 0 0.84106176 44 2000 27071 720031 13805818537
+59	19564 19 26 26 0.04000816 0.04000816 1 1 1 1 1
+60	19583 1001 8 792 0 0.84106176 43 0 25071 647097 11680159429
+61	20584 988 22 792 0.04000816 0.84106176 42 5001 25070 627027 11076614389
+62	21572 873 22 792 0.04000816 0.84106176 42 1 54 2176 115384
+63	22445 76 26 789 0.04000816 0.841058 4 0 52 53 2705
+64	22521 813 52 792 0.0800236 0.84106176 41 0 0 0 0
+71	23334 1677 8 792 0 0.84106176 81 0 536 20068 10685648
+5	25011 848 17 783 0.02000408 0.82105424 42 40 576 21752 12358624
+7	25859 797 17 784 0.02000408 0.821058 42 0 4.664e-05 0.0001008 4.3788544e-09
+8	26656 151 0 784 0 0.821058 9 0 1 4 4
+9	26807 1565 0 786 0 0.82106176 85 0 1 42 42
+10	28372 889 18 785 0.02000408 0.821058 42 47 583 22046 12665210
+11	29261 875 13 798 0.02000408 0.86106552 43 47 99 2077 102971
+14	30136 889 18 785 0.02000408 0.821058 42 40 576 21752 12358624
+15	31025 875 13 798 0.02000408 0.86106552 43 40 92 1776 76000
+21	31900 888 10 795 0 0.84106176 43 40 92 1776 76000
+23	32788 859 10 795 0 0.84106176 43 0 3.76e-06 7.52e-06 2.82752e-11
+24	33647 87 0 762 0 0.80105048 5 0 1 2 2
+25	33734 1684 0 797 0 0.84106552 87 0 1 43 43
+26	35418 888 11 796 0 0.84106176 43 47 99 2077 102971
+27	36306 912 20 790 0.04000816 0.84106176 42 47 583 22046 12665210
+30	37218 888 11 796 0 0.84106176 43 40 92 1776 76000
+31	38106 912 20 790 0.04000816 0.84106176 42 40 576 21752 12358624

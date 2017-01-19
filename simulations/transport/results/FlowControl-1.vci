@@ -1,0 +1,157 @@
+file 70180 1484787572                                           
+version 2
+run FlowControl-1-20170119-01:59:18-4171
+attr configname FlowControl
+attr datetime 20170119-01:59:18
+attr experiment FlowControl
+attr inifile omnetpp.ini
+attr iterationvars $processingTime=45
+attr iterationvars2 "$processingTime=45, $repetition=0"
+attr measurement $processingTime=45
+attr network Network
+attr processid 4171
+attr processingTime 45
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+
+vector 88  Network.server.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 89  Network.server.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 104  Network.client.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 105  Network.client.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 151  Network.client.tcp  tcpRcvQueueBytes  ETV
+vector 138  Network.client.tcp  "advertised window"  ETV
+vector 137  Network.client.tcp  "receive window"  ETV
+vector 140  Network.client.tcp  "sent ack"  ETV
+vector 101  Network.client.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 103  Network.client.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 110  Network.client.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 106  Network.client.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 91  Network.server.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 95  Network.server.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 117  Network.server.tcp  "rcvd seq"  ETV
+vector 118  Network.server.tcp  "rcvd ack"  ETV
+vector 114  Network.server.tcp  "advertised window"  ETV
+vector 112  Network.server.tcp  "send window"  ETV
+vector 127  Network.server.tcp  tcpRcvQueueBytes  ETV
+vector 113  Network.server.tcp  "receive window"  ETV
+vector 116  Network.server.tcp  "sent ack"  ETV
+vector 85  Network.server.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 87  Network.server.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 94  Network.server.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 90  Network.server.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 107  Network.client.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 111  Network.client.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 141  Network.client.tcp  "rcvd seq"  ETV
+vector 142  Network.client.tcp  "rcvd ack"  ETV
+vector 136  Network.client.tcp  "send window"  ETV
+vector 139  Network.client.tcp  "sent seq"  ETV
+vector 143  Network.client.tcp  "unacked bytes"  ETV
+vector 119  Network.server.tcp  "unacked bytes"  ETV
+vector 120  Network.server.tcp  "rcvd dupAcks"  ETV
+vector 115  Network.server.tcp  "sent seq"  ETV
+vector 155  Network.client.tcp  "measured RTT"  ETV
+vector 156  Network.client.tcp  "smoothed RTT"  ETV
+vector 157  Network.client.tcp  RTTVAR  ETV
+vector 158  Network.client.tcp  RTO  ETV
+vector 153  Network.client.tcp  cwnd  ETV
+vector 144  Network.client.tcp  "rcvd dupAcks"  ETV
+vector 131  Network.server.tcp  "measured RTT"  ETV
+vector 132  Network.server.tcp  "smoothed RTT"  ETV
+vector 133  Network.server.tcp  RTTVAR  ETV
+vector 134  Network.server.tcp  RTO  ETV
+vector 129  Network.server.tcp  cwnd  ETV
+vector 149  Network.client.tcp  "rcvd naseg"  ETV
+vector 148  Network.client.tcp  "rcvd oooseg"  ETV
+vector 130  Network.server.tcp  ssthresh  ETV
+129	4719 1484 65 1099 0.100074 52.646144079995 55 1072 11792 194719 1202781025
+130	6203 146 438 1002 10.040620719999 52.521125039995 5 1072 1072 5360 5745920
+131	6349 640 65 1055 0.100074 52.561132799995 20 0.04002896 4.580015359999 23.500750799995 104.90675744082
+132	6989 704 65 1055 0.100074 52.561132799995 20 0.00500677 1.821597931229 10.749565281378 13.873602299848
+133	7693 702 65 1055 0.100074 52.561132799995 20 0.187130681697 1.840991676485 15.877704592445 18.341033866796
+134	8395 666 65 1055 0.100074 52.561132799995 20 1 9.185564637169 74.610171551873 429.21640698664
+112	9061 1779 15 1099 0.02000408 52.646144079995 67 0 2000 84452 138361174
+113	10840 1893 15 1079 0.02000408 52.606132799995 68 65535 65535 4456380 292048863300
+114	12733 1917 15 1079 0.02000408 52.606132799995 69 65536 65589 4525470 296809841794
+115	14650 1773 42 1002 0.06001984 52.521125039995 64 5002 24625 1066282 19637828662
+116	16423 1688 15 1079 0.02000408 52.606132799995 68 1 54 3554 188418
+117	18111 1726 15 1099 0.02000408 52.646144079995 69 0 54 3501 185503
+118	19837 1921 15 1099 0.02000408 52.646144079995 69 0 25071 1146480 21547827162
+119	21758 2441 35 1099 0.06001192 52.646144079995 96 0 1611 65082 73281302
+120	24199 1620 39 1099 0.06001984 52.646144079995 67 0 3 30 70
+127	25819 1641 15 1079 0.02000408 52.606132799995 69 0 0 0 0
+153	27460 52 52 1088 0.0800236 52.626136559995 2 1072 1608 2680 3734848
+155	27512 28 52 52 0.0800236 0.0800236 1 0.04001544 0.04001544 0.04001544 0.0016012354383936
+156	27540 28 52 52 0.0800236 0.0800236 1 0.00500193 0.00500193 0.00500193 2.50193037249e-05
+157	27568 28 52 52 0.0800236 0.0800236 1 0.66125193 0.66125193 0.66125193 0.43725411492872
+158	27596 28 52 52 0.0800236 0.0800236 1 2.65000965 2.65000965 2.65000965 7.0225511450931
+136	27624 78 22 1088 0.04000816 52.626136559995 3 65535 65535 196605 12884508675
+137	27702 1834 8 1091 0 52.626140319995 69 0 2000 88452 146361174
+138	29536 1806 8 1091 0 52.626140319995 65 2000 27071 1144214 22673104452
+139	31342 20 26 26 0.04000816 0.04000816 1 1 1 1 1
+140	31362 1923 8 1091 0 52.626140319995 69 0 25071 1146480 21547827162
+141	33285 1911 22 1091 0.04000816 52.626140319995 68 5001 25070 1126425 20944868467
+142	35196 1718 22 1091 0.04000816 52.626140319995 68 1 54 3554 188418
+143	36914 94 26 1088 0.04000816 52.626136559995 4 0 52 53 2705
+144	37008 1502 52 1091 0.0800236 52.626140319995 62 0 0 0 0
+148	38510 260 416 995 7.020616959999 52.501121279995 10 1 10 55 385
+149	38770 129 401 965 5.520616959999 48.001121279995 5 1 5 15 55
+151	38899 3277 8 1091 0 52.626140319995 128 0 2000 79058 106476296
+85	42176 1665 17 1082 0.02000408 52.606132799995 68 40 576 22807 11649861
+87	43841 1712 17 1083 0.02000408 52.606136559995 68 0 9.728e-05 0.00100032 7.11237632e-08
+88	45553 1046 0 1083 0 52.606136559995 45 0 3 52 102
+89	46599 3150 0 1085 0 52.606140319995 137 0 1 68 68
+90	49749 1670 18 1084 0.02000408 52.606136559995 68 47 583 23283 11972491
+91	51419 1659 13 1097 0.02000408 52.646144079995 69 47 99 3299 160405
+94	53078 1670 18 1084 0.02000408 52.606136559995 68 40 576 22807 11649861
+95	54748 1659 13 1097 0.02000408 52.646144079995 69 40 92 2816 117600
+101	56407 1732 10 1094 0 52.626140319995 69 40 92 2816 117600
+103	58139 1670 10 1094 0 52.626140319995 69 0 3.76e-06 3.76e-06 1.41376e-11
+104	59809 50 0 30 0 0.04001192 3 0 1 1 1
+105	59859 3331 0 1096 0 52.626144079995 139 0 1 69 69
+106	63190 1732 11 1095 0 52.626140319995 69 47 99 3299 160405
+107	64922 1763 20 1089 0.04000816 52.626140319995 68 47 583 23283 11972491
+110	66685 1732 11 1095 0 52.626140319995 69 40 92 2816 117600
+111	68417 1763 20 1089 0.04000816 52.626140319995 68 40 576 22807 11649861
