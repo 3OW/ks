@@ -1,0 +1,61 @@
+<config>
+<!-- Router extern = Border-Router -->
+<interface hosts='extern' address='150.111.75.1' netmask='255.255.255.252' names='ppp0'/>	<!-- zu Router A -->
+
+<route hosts='extern' destination='140.1.128.0' netmask='255.255.128.0' gateway='150.111.75.2' interface='ppp0'/>	<!-- in die Firma -->
+
+<!-- RouterA -->
+<interface hosts='RouterA' address='140.1.128.1' netmask='255.255.255.252' names='ppp0'/>		<!-- zu S1 -->
+<interface hosts='RouterA' address='140.1.128.5' netmask='255.255.255.252' names='ppp1'/>		<!-- zu RouterB -->
+<interface hosts='RouterA' address='140.1.130.1' netmask='255.255.254.0' names='ppp2'/>			<!-- zu IP-NW 4 -->
+<interface hosts='RouterA' address='150.111.75.2' netmask='255.255.255.252' names='ppp3'/>		<!-- zu extern -->
+
+<route hosts='RouterA' destination='140.1.128.128' netmask='255.255.255.128' gateway='140.1.128.6' interface='ppp1'/>	<!-- IP-NW 1 zu Router B -->
+<route hosts='RouterA' destination='140.1.129.0' netmask='255.255.255.128' gateway='140.1.128.6' interface='ppp1'/>		<!-- IP-NW 2 zu Router B -->
+<route hosts='RouterA' destination='140.1.129.128' netmask='255.255.255.128' gateway='140.1.128.6' interface='ppp1'/>	<!-- IP-NW 3 zu Router B -->
+
+<route hosts='RouterA' destination='0.0.0.0' netmask='0.0.0.0' gateway='150.111.75.1' interface='ppp3'/>				<!-- zu Border-Router "extern" -->
+
+
+
+<!-- RouterB -->
+<interface hosts='RouterB' address='140.1.128.129' netmask='255.255.255.128' names='ppp0'/>		<!-- zu IP-NW 1 -->
+<interface hosts='RouterB' address='140.1.129.1' netmask='255.255.255.128' names='ppp1'/>		<!-- zu IP-NW 2 -->
+<interface hosts='RouterB' address='140.1.129.129' netmask='255.255.255.128' names='ppp2'/>		<!-- zu IP-NW 3 -->
+<interface hosts='RouterB' address='140.1.128.6' netmask='255.255.255.252' names='ppp3'/>		<!-- zu IP-NW 1 -->
+
+<route hosts='RouterB' destination='0.0.0.0' netmask='0.0.0.0' gateway='140.1.128.5' interface='ppp3'/>				<!-- zu RouterA -->
+
+
+<!-- S1 -->
+<interface hosts='S1' address='140.1.128.2' netmask='255.255.255.252'/>
+<route hosts='S1' destination='0.0.0.0' netmask='0.0.0.0' gateway='140.1.128.1' interface="ppp0"/>
+
+
+<!-- W1 -->
+<interface hosts='W1' address='140.1.128.130' netmask='255.255.255.252'/>
+<route hosts='W1' destination='0.0.0.0' netmask='0.0.0.0' gateway='140.1.128.129' interface="ppp0"/>
+
+
+<!-- W2 -->
+<interface hosts='W2' address='140.1.129.2' netmask='255.255.255.252'/>
+<route hosts='W2' destination='0.0.0.0' netmask='0.0.0.0' gateway='140.1.129.1' interface="ppp0"/>
+
+
+
+<!-- W3 -->
+<interface hosts='W3' address='140.1.129.130' netmask='255.255.255.252'/>
+<route hosts='W3' destination='0.0.0.0' netmask='0.0.0.0' gateway='140.1.129.129' interface="ppp0"/>
+
+
+
+<!-- W4 -->
+<interface hosts='W4' address='140.1.130.2' netmask='255.255.255.252'/>
+<route hosts='W4' destination='0.0.0.0' netmask='0.0.0.0' gateway='140.1.130.1' interface="ppp0"/>
+
+
+
+
+
+
+</config>

@@ -1,0 +1,17 @@
+version 2
+run ToRouter--extern---0-20170209-04:08:44-4500
+attr configname ToRouter--extern--
+attr datetime 20170209-04:08:44
+attr experiment ToRouter--extern--
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Network
+attr processid 4500
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
