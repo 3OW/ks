@@ -24,8 +24,8 @@
 <interface hosts='RouterA' address='192.168.1.65' netmask='255.255.255.0' names='eth0'/>
 <interface hosts='RouterA' address='192.168.1.130' netmask='255.255.255.0' names='eth1'/>
 
-<route hosts='RouterA' destination='192.168.1.66' netmask='255.255.255.255' gateway='192.168.1.65' interface='eth0' />
-<route hosts='RouterA' destination='192.168.1.131' netmask='255.255.255.255' gateway='192.168.1.130' interface='eth1' />
+<route hosts='RouterA' destination='192.168.1.66' netmask='255.255.255.255' gateway='0.0.0.0' interface='eth0' />
+<route hosts='RouterA' destination='192.168.1.131' netmask='255.255.255.255' gateway='0.0.0.0' interface='eth1' />
 <route hosts='RouterA' destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.1.129' interface='eth1' />
 
 
@@ -45,8 +45,8 @@
 <interface hosts='RouterB' address='192.168.2.65' netmask='255.255.255.0' names='eth0'/>
 <interface hosts='RouterB' address='192.168.2.130' netmask='255.255.255.0' names='eth1'/>
 
-<route hosts='RouterB' destination='192.168.2.66' netmask='255.255.255.255' gateway='192.168.2.65' interface='eth0' />
-<route hosts='RouterB' destination='192.168.2.131' netmask='255.255.255.255' gateway='192.168.2.130' interface='eth1' />
+<route hosts='RouterB' destination='192.168.2.66' netmask='255.255.255.255' gateway='0.0.0.0' interface='eth0' />
+<route hosts='RouterB' destination='192.168.2.131' netmask='255.255.255.255' gateway='0.0.0.0' interface='eth1' />
 <route hosts='RouterB' destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.2.129' interface='eth1' />
 
 
@@ -66,8 +66,8 @@
 <interface hosts='RouterC' address='192.168.3.65' netmask='255.255.255.0' names='eth0'/>
 <interface hosts='RouterC' address='192.168.3.130' netmask='255.255.255.0' names='eth1'/>
 
-<route hosts='RouterC' destination='192.168.3.66' netmask='255.255.255.255' gateway='192.168.3.65' interface='eth0' />
-<route hosts='RouterC' destination='192.168.3.131' netmask='255.255.255.255' gateway='192.168.3.130' interface='eth1' />
+<route hosts='RouterC' destination='192.168.3.66' netmask='255.255.255.255' gateway='0.0.0.0' interface='eth0' />
+<route hosts='RouterC' destination='192.168.3.131' netmask='255.255.255.255' gateway='0.0.0.0' interface='eth1' />
 <route hosts='RouterC' destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.3.129' interface='eth1' />
 
 <!-- HttpServerC -->
@@ -85,8 +85,8 @@
 <interface hosts='RouterD' address='192.168.4.65' netmask='255.255.255.0' names='eth0'/>
 <interface hosts='RouterD' address='192.168.4.130' netmask='255.255.255.0' names='eth1'/>
 
-<route hosts='RouterD' destination='192.168.4.66' netmask='255.255.255.255' gateway='192.168.4.65' interface='eth0' />
-<route hosts='RouterD' destination='192.168.4.131' netmask='255.255.255.255' gateway='192.168.4.130' interface='eth1' />
+<route hosts='RouterD' destination='192.168.4.66' netmask='255.255.255.255' gateway='0.0.0.0' interface='eth0' />
+<route hosts='RouterD' destination='192.168.4.131' netmask='255.255.255.255' gateway='0.0.0.0' interface='eth1' />
 <route hosts='RouterD' destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.4.129' interface='eth1' />
 
 

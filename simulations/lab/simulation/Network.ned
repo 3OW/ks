@@ -170,7 +170,7 @@ network Network
                 ethg[12];
         }
 
-    connections:
+    connections allowunconnected:
         SwitchA1.ethg[7] <--> tpcable <--> HostA.ethg[0];
         SwitchA1.ethg[9] <--> tpcable <--> RouterA.ethg[0];
         SwitchA2.ethg[5] <--> tpcable <--> RouterM.ethg[0];
@@ -178,7 +178,7 @@ network Network
         SwitchA2.ethg[1] <--> tpcable <--> RouterA.ethg[1];
         SwitchB2.ethg[4] <--> tpcable <--> HttpServerB.ethg[0];
         SwitchB2.ethg[2] <--> tpcable <--> RouterB.ethg[1];
-        SwitchB1.ethg[8y] <--> tpcable <--> HostB.ethg[0];
+        SwitchB1.ethg[8] <--> tpcable <--> HostB.ethg[0];
         SwitchB1.ethg[10] <--> tpcable <--> RouterB.ethg[0];
         SwitchC2.ethg[3] <--> tpcable <--> HttpServerC.ethg[0];
         SwitchC2.ethg[1] <--> tpcable <--> RouterC.ethg[1];
