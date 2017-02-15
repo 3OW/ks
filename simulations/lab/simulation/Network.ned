@@ -50,14 +50,14 @@ network Network
             parameters:
                 @display("p=130,436");
             gates:
-                ethg[2];
+                ethg[12];
         }
 
         SwitchA2: EtherSwitch {
             parameters:
                 @display("p=242,241");
             gates:
-                ethg[3];
+                ethg[12];
         }
 
         configurator: IPv4NetworkConfigurator {
@@ -90,14 +90,14 @@ network Network
             parameters:
                 @display("p=407,436");
             gates:
-                ethg[2];
+                ethg[12];
         }
 
         SwitchB2: EtherSwitch {
             parameters:
                 @display("p=519,241");
             gates:
-                ethg[3];
+                ethg[12];
         }
 
         HostC: StandardHost {
@@ -125,14 +125,14 @@ network Network
             parameters:
                 @display("p=653,436");
             gates:
-                ethg[2];
+                ethg[12];
         }
 
         SwitchC2: EtherSwitch {
             parameters:
                 @display("p=765,241");
             gates:
-                ethg[3];
+                ethg[12];
         }
 
         HostD: StandardHost {
@@ -160,36 +160,36 @@ network Network
             parameters:
                 @display("p=924,436");
             gates:
-                ethg[2];
+                ethg[12];
         }
 
         SwitchD2: EtherSwitch {
             parameters:
                 @display("p=1036,241");
             gates:
-                ethg[3];
+                ethg[12];
         }
 
     connections:
-        SwitchA1.ethg[0] <--> tpcable <--> HostA.ethg[0];
-        SwitchA1.ethg[1] <--> tpcable <--> RouterA.ethg[0];
-        SwitchA2.ethg[0] <--> tpcable <--> RouterM.ethg[0];
-        SwitchA2.ethg[1] <--> tpcable <--> HttpServerA.ethg[0];
-        SwitchA2.ethg[2] <--> tpcable <--> RouterA.ethg[1];
-        SwitchB2.ethg[1] <--> tpcable <--> HttpServerB.ethg[0];
+        SwitchA1.ethg[7] <--> tpcable <--> HostA.ethg[0];
+        SwitchA1.ethg[9] <--> tpcable <--> RouterA.ethg[0];
+        SwitchA2.ethg[5] <--> tpcable <--> RouterM.ethg[0];
+        SwitchA2.ethg[3] <--> tpcable <--> HttpServerA.ethg[0];
+        SwitchA2.ethg[1] <--> tpcable <--> RouterA.ethg[1];
+        SwitchB2.ethg[4] <--> tpcable <--> HttpServerB.ethg[0];
         SwitchB2.ethg[2] <--> tpcable <--> RouterB.ethg[1];
-        SwitchB1.ethg[0] <--> tpcable <--> HostB.ethg[0];
-        SwitchB1.ethg[1] <--> tpcable <--> RouterB.ethg[0];
-        SwitchC2.ethg[1] <--> tpcable <--> HttpServerC.ethg[0];
-        SwitchC2.ethg[2] <--> tpcable <--> RouterC.ethg[1];
-        SwitchC1.ethg[0] <--> tpcable <--> HostC.ethg[0];
-        SwitchC1.ethg[1] <--> tpcable <--> RouterC.ethg[0];
-        SwitchD2.ethg[1] <--> tpcable <--> HttpServerD.ethg[0];
+        SwitchB1.ethg[8y] <--> tpcable <--> HostB.ethg[0];
+        SwitchB1.ethg[10] <--> tpcable <--> RouterB.ethg[0];
+        SwitchC2.ethg[3] <--> tpcable <--> HttpServerC.ethg[0];
+        SwitchC2.ethg[1] <--> tpcable <--> RouterC.ethg[1];
+        SwitchC1.ethg[7] <--> tpcable <--> HostC.ethg[0];
+        SwitchC1.ethg[9] <--> tpcable <--> RouterC.ethg[0];
+        SwitchD2.ethg[4] <--> tpcable <--> HttpServerD.ethg[0];
         SwitchD2.ethg[2] <--> tpcable <--> RouterD.ethg[1];
-        SwitchD1.ethg[0] <--> tpcable <--> HostD.ethg[0];
-        SwitchD1.ethg[1] <--> tpcable <--> RouterD.ethg[0];
-        SwitchB2.ethg[0] <--> tpcable <--> RouterM.ethg[1];
-        SwitchC2.ethg[0] <--> tpcable <--> RouterM.ethg[2];
-        SwitchD2.ethg[0] <--> tpcable <--> RouterM.ethg[3];
+        SwitchD1.ethg[8] <--> tpcable <--> HostD.ethg[0];
+        SwitchD1.ethg[10] <--> tpcable <--> RouterD.ethg[0];
+        SwitchB2.ethg[6] <--> tpcable <--> RouterM.ethg[1];
+        SwitchC2.ethg[5] <--> tpcable <--> RouterM.ethg[2];
+        SwitchD2.ethg[6] <--> tpcable <--> RouterM.ethg[3];
 }
 
