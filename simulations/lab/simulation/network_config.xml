@@ -4,26 +4,70 @@
 
 <!-- RouterM -->
 <interface hosts='RouterM' address='192.168.1.129' netmask='255.255.255.0' names='eth0'/>
+<interface hosts='RouterM' address='192.168.2.129' netmask='255.255.255.0' names='eth1'/>
+<interface hosts='RouterM' address='192.168.3.129' netmask='255.255.255.0' names='eth2'/>
+<interface hosts='RouterM' address='192.168.4.129' netmask='255.255.255.0' names='eth3'/>
 
 <route hosts='RouterM'  destination='192.168.1.0' netmask='255.255.255.0' gateway='192.168.5.2' interface='eth0'/>
 
+
 <!-- HostA -->
-<interface hosts='HostA' address='192.168.1.10' netmask='255.255.255.0' names='eth0'/>
+<interface hosts='HostA' address='192.168.1.66' netmask='255.255.255.0' names='eth0'/>
 
 <route hosts='HostA'  destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.1.1' interface='eth0'/>
 
+
 <!-- RouterA -->
-<interface hosts='RouterA' address='192.168.1.1' netmask='255.255.255.0' names='eth0'/>
+<interface hosts='RouterA' address='192.168.1.65' netmask='255.255.255.0' names='eth0'/>
+<interface hosts='RouterA' address='192.168.1.130' netmask='255.255.255.0' names='eth1'/>
+
 
 <!-- HttpServerA -->
 <interface hosts='HttpServerA' address='192.168.1.131' netmask='255.255.255.0' names='eth0'/>
 
 
-
-
-				
 <!-- HostB -->
+<interface hosts='HostB' address='192.168.2.66' netmask='255.255.255.0' names='eth0'/>
+
+<route hosts='HostB'  destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.1.1' interface='eth0'/>
+
 
 <!-- RouterB -->
+<interface hosts='RouterB' address='192.168.2.65' netmask='255.255.255.0' names='eth0'/>
+<interface hosts='RouterB' address='192.168.2.130' netmask='255.255.255.0' names='eth1'/>
+
+
+<!-- HttpServerB -->
+<interface hosts='HttpServerB' address='192.168.2.131' netmask='255.255.255.0' names='eth0'/>
+
+
+<!-- HostC -->
+<interface hosts='HostC' address='192.168.3.66' netmask='255.255.255.0' names='eth0'/>
+
+<route hosts='HostC'  destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.1.1' interface='eth0'/>
+
+
+<!-- RouterC -->
+<interface hosts='RouterC' address='192.168.3.65' netmask='255.255.255.0' names='eth0'/>
+<interface hosts='RouterC' address='192.168.3.130' netmask='255.255.255.0' names='eth1'/>
+
+
+<!-- HttpServerC -->
+<interface hosts='HttpServerC' address='192.168.3.131' netmask='255.255.255.0' names='eth0'/>
+
+
+<!-- HostD -->
+<interface hosts='HostD' address='192.168.4.66' netmask='255.255.255.0' names='eth0'/>
+
+<route hosts='HostD'  destination='0.0.0.0' netmask='0.0.0.0' gateway='192.168.1.1' interface='eth0'/>
+
+
+<!-- RouterD -->
+<interface hosts='RouterD' address='192.168.4.65' netmask='255.255.255.0' names='eth0'/>
+<interface hosts='RouterA' address='192.168.4.130' netmask='255.255.255.0' names='eth1'/>
+
+
+<!-- HttpServerD -->
+<interface hosts='HttpServerD' address='192.168.4.131' netmask='255.255.255.0' names='eth0'/>
 				
 </config>
