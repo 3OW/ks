@@ -83,7 +83,7 @@
 
 <!-- RouterD -->
 <interface hosts='RouterD' address='192.168.4.65' netmask='255.255.255.0' names='eth0'/>
-<interface hosts='RouterA' address='192.168.4.130' netmask='255.255.255.0' names='eth1'/>
+<interface hosts='RouterD' address='192.168.4.130' netmask='255.255.255.0' names='eth1'/>
 
 <route hosts='RouterD' destination='192.168.4.66' netmask='255.255.255.255' gateway='192.168.4.65' interface='eth0' />
 <route hosts='RouterD' destination='192.168.4.131' netmask='255.255.255.255' gateway='192.168.4.130' interface='eth1' />
