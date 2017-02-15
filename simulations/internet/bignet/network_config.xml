@@ -35,7 +35,7 @@ insgesamt 64 Subnetze a 2 Endgeräte (von den Subnetzmasken ist nur das letzte B
 <interface hosts='RProvider' address='1.1.2.1' netmask='255.255.255.0' names='ppp1'/>
 <interface hosts='RProvider' address='91.12.77.21' netmask='255.255.255.252' names='ppp2'/>
 
-<route hosts='RProvider' destination='199.168.1.0' netmask='255.255.255.0' gateway='91.12.77.22' interface='ppp2'/>	<!-- in die Firma -->
+<route hosts='RProvider' destination='199.168.1.0' netmask='255.255.255.0' gateway='91.12.77.22' interface='ppp2'/>	<!-- in die Firma CORRECTED NETMASK -->
 
 <!-- HostX, externer Host -->
 <interface hosts='hostX' address='1.1.1.2' netmask='255.255.255.0'/>
@@ -74,7 +74,7 @@ insgesamt 64 Subnetze a 2 Endgeräte (von den Subnetzmasken ist nur das letzte B
 <route hosts='RZentral' destination='199.168.1.0' netmask='255.255.255.224' gateway='10.0.0.2' interface='ppp1'/> 					<!-- REtage2 -->
 <route hosts='RZentral' destination='199.168.1.0' netmask='255.255.255.0' gateway='10.0.0.6' interface='ppp2'/>  						<!-- REtage1 -->
 <route hosts='RZentral' destination='199.168.1.66' netmask='255.255.255.255' gateway='199.168.1.65' interface='ppp3'/>			<!-- Server -->
-<route hosts='RZentral' destination='1.1.0.0' netmask='255.255.0.0' gateway='91.12.77.21' interface='ppp0' />					<!-- Provider -->
+<route hosts='RZentral' destination='1.1.0.0' netmask='255.255.0.0' gateway='91.12.77.21' interface='ppp0' />					<!-- Provider ADDED -->
 
 <!-- REtage1 -->
 <interface hosts='REtage1' address='10.0.0.17' netmask='255.255.255.252' names='ppp1'/>

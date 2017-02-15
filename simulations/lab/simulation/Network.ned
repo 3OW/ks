@@ -65,11 +65,131 @@ network Network
                 @display("p=50,21");
         }
 
+        HostB: StandardHost {
+            parameters:
+                @display("p=407,527");
+            gates:
+                ethg[1];
+        }
+
+        HttpServerB: StandardHost {
+            parameters:
+                @display("p=376,242");
+            gates:
+                ethg[1];
+        }
+
+        RouterB: Router {
+            parameters:
+                @display("p=407,365");
+            gates:
+                ethg[2];
+        }
+
+        SwitchB1: EtherSwitch {
+            parameters:
+                @display("p=407,436");
+            gates:
+                ethg[2];
+        }
+
+        SwitchB2: EtherSwitch {
+            parameters:
+                @display("p=519,241");
+            gates:
+                ethg[3];
+        }
+
+        HostC: StandardHost {
+            parameters:
+                @display("p=653,527");
+            gates:
+                ethg[1];
+        }
+
+        HttpServerC: StandardHost {
+            parameters:
+                @display("p=622,242");
+            gates:
+                ethg[1];
+        }
+
+        RouterC: Router {
+            parameters:
+                @display("p=653,365");
+            gates:
+                ethg[2];
+        }
+
+        SwitchC1: EtherSwitch {
+            parameters:
+                @display("p=653,436");
+            gates:
+                ethg[2];
+        }
+
+        SwitchC2: EtherSwitch {
+            parameters:
+                @display("p=765,241");
+            gates:
+                ethg[3];
+        }
+
+        HostD: StandardHost {
+            parameters:
+                @display("p=924,527");
+            gates:
+                ethg[1];
+        }
+
+        HttpServerD: StandardHost {
+            parameters:
+                @display("p=893,242");
+            gates:
+                ethg[1];
+        }
+
+        RouterD: Router {
+            parameters:
+                @display("p=924,365");
+            gates:
+                ethg[2];
+        }
+
+        SwitchD1: EtherSwitch {
+            parameters:
+                @display("p=924,436");
+            gates:
+                ethg[2];
+        }
+
+        SwitchD2: EtherSwitch {
+            parameters:
+                @display("p=1036,241");
+            gates:
+                ethg[3];
+        }
+
     connections:
         SwitchA1.ethg[0] <--> tpcable <--> HostA.ethg[0];
         SwitchA1.ethg[1] <--> tpcable <--> RouterA.ethg[0];
         SwitchA2.ethg[0] <--> tpcable <--> RouterM.ethg[0];
         SwitchA2.ethg[1] <--> tpcable <--> HttpServerA.ethg[0];
         SwitchA2.ethg[2] <--> tpcable <--> RouterA.ethg[1];
+        SwitchB2.ethg[1] <--> tpcable <--> HttpServerB.ethg[0];
+        SwitchB2.ethg[2] <--> tpcable <--> RouterB.ethg[1];
+        SwitchB1.ethg[0] <--> tpcable <--> HostB.ethg[0];
+        SwitchB1.ethg[1] <--> tpcable <--> RouterB.ethg[0];
+        SwitchC2.ethg[1] <--> tpcable <--> HttpServerC.ethg[0];
+        SwitchC2.ethg[2] <--> tpcable <--> RouterC.ethg[1];
+        SwitchC1.ethg[0] <--> tpcable <--> HostC.ethg[0];
+        SwitchC1.ethg[1] <--> tpcable <--> RouterC.ethg[0];
+        SwitchD2.ethg[1] <--> tpcable <--> HttpServerD.ethg[0];
+        SwitchD2.ethg[2] <--> tpcable <--> RouterD.ethg[1];
+        SwitchD1.ethg[0] <--> tpcable <--> HostD.ethg[0];
+        SwitchD1.ethg[1] <--> tpcable <--> RouterD.ethg[0];
+        SwitchB2.ethg[0] <--> tpcable <--> RouterM.ethg[1];
+        SwitchC2.ethg[0] <--> tpcable <--> RouterM.ethg[2];
+        SwitchD2.ethg[0] <--> tpcable <--> RouterM.ethg[3];
 }
 

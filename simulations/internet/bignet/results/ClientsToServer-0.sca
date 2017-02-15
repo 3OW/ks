@@ -1,14 +1,14 @@
 version 2
-run ToRouter--extern---0-20170209-04:24:52-4717
-attr configname ToRouter--extern--
-attr datetime 20170209-04:24:52
-attr experiment ToRouter--extern--
+run ClientsToServer-0-20170209-01:11:09-1859
+attr configname ClientsToServer
+attr datetime 20170209-01:11:09
+attr experiment ClientsToServer
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network Network
-attr processid 4717
+attr processid 1859
 attr repetition 0
 attr replication #0
 attr resultdir results
